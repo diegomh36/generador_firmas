@@ -19,19 +19,20 @@
         <div class="row mt-3 mb-5">
             <div class="col-md-9 mx-auto" >
                 <div style="padding:14px; margin-top:50px; background-color:#ffffff; border: 2px solid #0f2008; border-radius: 3%;">
-                    <form method="POST" action="{% url 'pages:firmar' page.id 'all' %}">
+                    
+                    <form id="signature-form" method="POST" action="{% url 'pages:firmar' page.id 'all' %}">
+                        {% csrf_token %}
                         <h1>Firma Digital</h1>
-                        <p>Participante {{ signed_count|add:"1" }} de {{ page.assistants }}</p>                    <form method="post">
-                            {% csrf_token %}
-                            <label>Nombre del firmante: {{signature.signer_name}}</label>
-                            <input type="text" name="signer_name" required>
-                            <br>
-                            <canvas id="signature-pad" class="signature-pad"></canvas>
-                            <input type="hidden" id="signature" name="signature">
-                            <div>
-                                <button type="button" id="clear-signature" class="btn btn-outline-danger">Borrar</button>
-                                <button type="submit" class="btn btn-outline-success">Siguiente</button>  
-                            </div>
+                        <p>Participante {{ signed_count|add:"1" }} de {{ page.assistants }}</p>
+                        <label>Nombre del firmante: {{signature.signer_name}}</label>
+                        <input type="text" name="signer_name" required>
+                        <br>
+                        <canvas id="signature-pad" class="signature-pad"></canvas>
+                        <input type="hidden" id="signature" name="signature">
+                        <div>
+                            <button type="button" id="clear-signature" class="btn btn-outline-danger">Borrar</button>
+                            <button type="submit" class="btn btn-outline-success">Siguiente</button>  
+                        </div>
                     </form>
 
                     <script>
@@ -55,7 +56,7 @@
                             resizeCanvas();
                             
                             // Al enviar el formulario, guardar la firma en el campo oculto
-                            document.querySelector('form').addEventListener('submit', function(e) {  
+                            document.getElementById('signature-form').addEventListener('submit', function(event) {
                                 document.getElementById('signature').value = signaturePad.toDataURL();
                             });
                             

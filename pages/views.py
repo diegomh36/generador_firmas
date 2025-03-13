@@ -163,7 +163,6 @@ def finalizar_view(request, page_id):
     page = get_object_or_404(Page, id=page_id)
     return render(request, "pages/final_page.html", {"page": page})
 
-
 def sign_training(request, page_id, sign_all):
     print(f"Entrando a sign_training - page_id: {page_id}, sign_all: {sign_all}")
     page = get_object_or_404(Page, id=page_id)
@@ -171,6 +170,17 @@ def sign_training(request, page_id, sign_all):
     print(f"Firmas actuales: {signed_count}, requeridas: {page.assistants}")
 
     if request.method == "POST":
+        print(f"CSRF Token: {request.META.get('CSRF_COOKIE')}")
+        print(f"User authenticated: {request.user.is_authenticated}")
+        print(f"User is staff: {request.user.is_staff}")
+        print(f"Form data: {request.POST}")
+
+        # if the user is admin, print the request.POST
+        if request.user.is_staff:
+            print("Eres Admin")
+        else: 
+            print("No eres admin")
+
         print("Entró al bloque POST")
         signer_name = request.POST["signer_name"]
         signature_data = request.POST["signature"]
@@ -206,7 +216,6 @@ def sign_training(request, page_id, sign_all):
 
     print(f"No estoy entrando al if")
     return render(request, "pages/sign_training.html", {"page": page, "signed_count": signed_count})
-
 def sign_training2(request, page_id, sign_all):
     print(f"Entrando a sign_training - page_id: {page_id}, sign_all: {sign_all}")
     page = get_object_or_404(Page, id=page_id)
