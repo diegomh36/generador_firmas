@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+<link href="{% static 'pages/css/previsualizacion.css' %}" rel="stylesheet">
+{% block title %}Crear documento{% endblock %}
+{% block content %}
+{% include 'pages/includes/pages_menu.html'%}
+<div class="container mt-5">
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-primary">Siguiente</button>
+    </form>
+</div>
+{% endblock %}
