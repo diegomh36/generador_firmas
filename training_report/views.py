@@ -727,7 +727,10 @@ def generar_pdf(request):
         p.save()
         return response
 
-genai.configure(api_key='INTRODUZCAN AQUÍ SU CLAVE DE API')
+with open("token.config", "r") as token_file:
+    api_key = token_file.read().strip()
+    
+genai.configure(api_key=api_key)
 
 def analizar_imagen_comida(request):
     resultado = None

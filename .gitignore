@@ -1,0 +1,9 @@
+# Ignorar vscode
+.vscode/
+
+# TOKENS
+token.config
+
+# Ignorar pipfiles
+Pipfile
+Pipfile.lock

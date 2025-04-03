@@ -19,6 +19,18 @@
         <div class="row mt-3 mb-5">
             <div class="col-md-9 mx-auto">
                 <div style="padding:14px; margin-top:50px; background-color:#ffffff; border: 2px solid #0f2008; border-radius: 3%;">
+<<<<<<< HEAD:pages/templates/pages/sign_training.html
+                    
+                    <form id="signature-form" method="POST" action="{% url 'pages:firmar' page.id 'all' %}">
+                        {% csrf_token %}
+                        <h1>Firma Digital</h1>
+                        <p>Participante {{ signed_count|add:"1" }} de {{ page.assistants }}</p>
+                        <label>Nombre del firmante: {{signature.signer_name}}</label>
+                        <input type="text" name="signer_name" required>
+                        <br>
+                        <canvas id="signature-pad" class="signature-pad"></canvas>
+                        <input type="hidden" id="signature" name="signature">
+=======
                     <form id="signature-form" method="POST" action="{% url 'training_report:sign_training' training.id %}">
                         {% csrf_token %}
                         <h1>Firma Digital</h1>
@@ -33,6 +45,7 @@
                         <canvas id="signature-pad" class="signature-pad" style="opacity: 0; pointer-events: none;"></canvas>
                             <input type="hidden" id="signature" name="signature" >
                         {% endif %}
+>>>>>>> b419b6db8a8d790c855db6168efe9c498b09d02b:training_report/templates/training_report/sign_training.html
                         <div>
                             <button type="button" id="clear-signature" class="btn btn-outline-danger">Borrar</button>
                             <button type="submit" class="btn btn-outline-success">Siguiente</button>  
@@ -59,7 +72,11 @@
                             resizeCanvas();
                             
                             // Al enviar el formulario, guardar la firma en el campo oculto
+<<<<<<< HEAD:pages/templates/pages/sign_training.html
+                            document.getElementById('signature-form').addEventListener('submit', function(event) {
+=======
                             document.getElementById('signature-form').addEventListener('submit', function(e) {  
+>>>>>>> b419b6db8a8d790c855db6168efe9c498b09d02b:training_report/templates/training_report/sign_training.html
                                 document.getElementById('signature').value = signaturePad.toDataURL();
                             });
                             
