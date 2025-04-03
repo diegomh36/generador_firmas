@@ -1,0 +1,50 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Documentos{% endblock %}
+{% block content %}
+{% include 'training_report/includes/training_report_menu.html' %}
+  <div class="container mt-4">
+    <table class="table table-striped table-bordered">
+      <thead class="table-dark">
+          <tr>
+              <th>Nombre formador/a</th>
+              <th>Documento</th>
+              <th>Fecha formación</th>
+              <th>Contenidos de formación</th>
+              <th>Nº asistentes</th>
+              <th>Opciones</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for training_report in training_report_list %}
+          <tr>
+            <td>{{ training_report.name }}</td>
+            <td>
+              <a href="{% static 'training_report/pdfs/formacion_' %}{{ training_report.id }}.pdf" target="_blank">
+                  Ver PDF
+              </a>
+            </td>
+            <td>{{ training_report.date|date:"d/m/Y"|striptags|safe }}</td>
+            <td>
+              {% for content in training_report.contents.all %}
+                {{ content.name }}{% if not forloop.last %}, {% endif %}
+              {% endfor %}
+            </td>
+            <td>{{ training_report.assistants|safe }}</td>
+            <td>
+                {% if request.user.is_staff %}
+                  <a href="{% url 'training_report:update' training_report.id %}" class="btn btn-warning btn-sm">Editar</a>
+                  <a href="{% url 'training_report:delete' training_report.id %}" class="btn btn-danger btn-sm">Borrar</a>
+                  <a href="{% url 'training_report:final_training' training_report.id %}" class="btn btn-success btn-sm">Enviar</a>
+                {% endif %}
+                <a href="{% url 'training_report:sign_training' training_report.id %}" class="btn btn-outline-success btn-sm">Firmar</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5" class="text-center">No hay formaciones registradas.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+  </div>
+{% endblock %}

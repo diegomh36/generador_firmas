@@ -39,10 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'pages.apps.PagesConfig',
+    'training_report.apps.TrainingReportsConfig',
     "crispy_forms",
     "crispy_bootstrap5",
-
 ]
 
 MIDDLEWARE = [
@@ -127,18 +126,21 @@ STATIC_URL = 'static/'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
+# Clave para usar API de Google
+GOOGLE_API_KEY = 'INTRODUZCAN AQUÍ SU CLAVE DE API'
+
 # Configuración para envío de correos (falta poner clave en variable)
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'diegodmh22@gmail.com'
-EMAIL_HOST_PASSWORD = 'lzle bsny oyhf yori'
+EMAIL_HOST_PASSWORD = 'ejbp rgmx xefu hsmq'
 DEFAULT_FROM_EMAIL = 'diegodmh22@gmail.com'  #Correo al que mandaremos la copia del parte
 
 
 # Auth redirects
-LOGIN_REDIRECT_URL = 'pages:pages'
+LOGIN_REDIRECT_URL = 'training_report:training_report'
 LOGOUT_REDIRECT_URL = 'home'
 
 # Default primary key field type

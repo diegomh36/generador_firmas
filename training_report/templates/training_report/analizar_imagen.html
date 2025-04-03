@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+<link href="{% static 'training_report/css/previsualizacion.css' %}" rel="stylesheet">
+{% block title %}Crear documento{% endblock %}
+{% block content %}
+{% include 'training_report/includes/training_report_menu.html'%}
+<div class="container mt-5">
+    <h1>Analizar Imagen de Comida</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Analizar</button>
+    </form>
+
+    {% if resultado %}
+        <h2>Resultado:</h2>
+        <p>{{ resultado }}</p>
+    {% endif %}
+</div>
+{% endblock %}

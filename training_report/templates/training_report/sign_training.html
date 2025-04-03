@@ -1,0 +1,94 @@
+{% extends 'core/base.html' %}
+{% load static %}
+<link href="{% static 'training_report/css/previsualizacion.css' %}" rel="stylesheet">
+{% block title %}Crear documento{% endblock %}
+{% block head %}
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad"></script>
+    <style>
+        canvas {
+            border: 1px solid black;
+            width: 65%;
+            height: 150px;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+{% include 'training_report/includes/training_report_menu.html'%}
+<main role="main">
+    <div class="container">
+        <div class="row mt-3 mb-5">
+            <div class="col-md-9 mx-auto">
+                <div style="padding:14px; margin-top:50px; background-color:#ffffff; border: 2px solid #0f2008; border-radius: 3%;">
+<<<<<<< HEAD:pages/templates/pages/sign_training.html
+                    
+                    <form id="signature-form" method="POST" action="{% url 'pages:firmar' page.id 'all' %}">
+                        {% csrf_token %}
+                        <h1>Firma Digital</h1>
+                        <p>Participante {{ signed_count|add:"1" }} de {{ page.assistants }}</p>
+                        <label>Nombre del firmante: {{signature.signer_name}}</label>
+                        <input type="text" name="signer_name" required>
+                        <br>
+                        <canvas id="signature-pad" class="signature-pad"></canvas>
+                        <input type="hidden" id="signature" name="signature">
+=======
+                    <form id="signature-form" method="POST" action="{% url 'training_report:sign_training' training.id %}">
+                        {% csrf_token %}
+                        <h1>Firma Digital</h1>
+                        <p>Participante {{ signed_count|add:"1" }} de {{ training.assistants }}</p>
+                        <label>Nombre del firmante:</label>
+                        <input type="text" name="signer_name" required>
+                        <br>
+                        {% if signed_count < 1 and training.sign_all == 'one' or training.sign_all == 'all' %}
+                            <canvas id="signature-pad" class="signature-pad"></canvas>
+                            <input type="hidden" id="signature" name="signature">
+                        {% else %}
+                        <canvas id="signature-pad" class="signature-pad" style="opacity: 0; pointer-events: none;"></canvas>
+                            <input type="hidden" id="signature" name="signature" >
+                        {% endif %}
+>>>>>>> b419b6db8a8d790c855db6168efe9c498b09d02b:training_report/templates/training_report/sign_training.html
+                        <div>
+                            <button type="button" id="clear-signature" class="btn btn-outline-danger">Borrar</button>
+                            <button type="submit" class="btn btn-outline-success">Siguiente</button>  
+                        </div>
+                    </form>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            var canvas = document.getElementById('signature-pad');
+                            var signaturePad = new SignaturePad(canvas, {
+                                backgroundColor: 'rgba(255, 255, 255, 0)',
+                                penColor: 'black'
+                            });
+                            
+                            // Adaptación del lienzo al tamaño de la pantalla
+                            function resizeCanvas() {
+                                var ratio = Math.max(window.devicePixelRatio || 1, 1);
+                                canvas.width = canvas.offsetWidth * ratio;
+                                canvas.height = canvas.offsetHeight * ratio;
+                                canvas.getContext("2d").scale(ratio, ratio);
+                                signaturePad.clear(); // Limpiar después de redimensionar
+                            }
+                            
+                            window.addEventListener("resize", resizeCanvas);
+                            resizeCanvas();
+                            
+                            // Al enviar el formulario, guardar la firma en el campo oculto
+<<<<<<< HEAD:pages/templates/pages/sign_training.html
+                            document.getElementById('signature-form').addEventListener('submit', function(event) {
+=======
+                            document.getElementById('signature-form').addEventListener('submit', function(e) {  
+>>>>>>> b419b6db8a8d790c855db6168efe9c498b09d02b:training_report/templates/training_report/sign_training.html
+                                document.getElementById('signature').value = signaturePad.toDataURL();
+                            });
+                            
+                            // Botón para limpiar la firma
+                            document.getElementById('clear-signature').addEventListener('click', function() {
+                                signaturePad.clear();
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>    
+    </div>        
+</main>
+{% endblock %}
