@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}{{training_report.name}}{% endblock %}
+{% block content %}
+{% include 'training_report/includes/training_report_menu.html' %}
+<main role="main">
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-md-9 mx-auto">
+        <h2 class="section-heading mb-4">{{training_report.name}}</h2>
+        <div>
+          <p>Número de asistentes: {{training_report.assistants|safe}}</p>
+          <p>Fecha de realización: {{training_report.date|date:"d/m/Y"|striptags|safe}}</p>
+          {% if request.user.is_staff %}
+            <p><a href="{% url 'training_report:update' training_report.id %}">Editar</a></p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

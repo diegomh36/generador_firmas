@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+<link href="{% static 'training_report/css/previsualizacion.css' %}" rel="stylesheet">
+{% block title %}Crear documento{% endblock %}
+{% block content %}
+{% include 'training_report/includes/training_report_menu.html'%}
+<div class="container mt-5">
+    <h1>Analizar Imagen de Comida</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Analizar Imágenes</button>
+    </form>
+    
+    {% if resultado %}
+    <div class="mt-4">
+        <h3>Resultados:</h3>
+        <pre>{{ resultado }}</pre>
+    </div>
+    {% endif %}
+    
+    {% if token_info %}
+    <div class="mt-3">
+        <p>Tokens usados: {{ token_info.total_tokens }} ({{ token_info.imagenes }} imágenes)</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
