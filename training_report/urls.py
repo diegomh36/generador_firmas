@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import TrainingReportListView, TrainingReportCreate, TrainingReportUpdate, TrainingReportDelete, create_training, sign_training, generate_pdf, final_training_view, send_email, analizar_imagenes_comida, analizar_imagenes_personalizado
+from .views import TrainingReportListView, TrainingReportCreate, TrainingReportUpdate, TrainingReportDelete, create_training, sign_training, generate_pdf, final_training_view, send_email, analizar_imagenes_comida, analizar_imagenes_personalizado, crear_rueda_alimentos
 from .views import AnalizarImagenesProporcionView
 
 TrainingReports_patterns = ([ 
@@ -15,6 +15,7 @@ TrainingReports_patterns = ([
     path('analizar_comida/', analizar_imagenes_comida, name='analizar_comida'),
     path('analizar_imagenes_personalizado/', analizar_imagenes_personalizado, name='analizar_imagenes_personalizado'),
     path('analizar-imagenes-proporcion/', AnalizarImagenesProporcionView.as_view(), name='analizar_imagenes_proporcion'),
+    path('crear-rueda-alimentos/', crear_rueda_alimentos, name='crear_rueda_alimentos'),
 
 ], 'training_report')
 

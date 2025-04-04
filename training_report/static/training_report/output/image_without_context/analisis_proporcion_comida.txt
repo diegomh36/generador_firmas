@@ -1,0 +1,27 @@
+
+Hour: 2025-04-04 13:32:17
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion y peso de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 2 kg incluyendo todos los alimentos que se encuentran en la imagen. Solo responde con la información solicitada, nada más.
+Response: *   **Tipo de comida:** Pollo frito.
+*   **Proporción:** 100%.
+*   **Peso aproximado:** 2 kg.
+Tokens Used: 359
+--------------------------------------------------
+
+Hour: 2025-04-04 14:14:54
+Prompt: 
+                Imagenes de comida sobrante da una respuesta de la siguiente forma para cada imagen:
+                - Categoría (Carne, Pescado, carne o pescado en salsa, marisco)
+                - Subcategoría
+                - Información adicional del plato
+                - Posibles ingredientes
+                - Recomendaciones para recalentar y aprovechar las sobras
+                Solo responde con la información solicitada, nada más.
+                
+Response: - Categoría: Carne
+- Subcategoría: Pollo frito
+- Información adicional del plato: No visible
+- Posibles ingredientes: Pollo, harina, especias
+- Recomendaciones para recalentar y aprovechar las sobras: Horno, freidora de aire. Croquetas, ensaladilla.
+Tokens Used: 406
+--------------------------------------------------

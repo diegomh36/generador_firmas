@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+<link href="{% static 'training_report/css/previsualizacion.css' %}" rel="stylesheet">
+{% block title %}Crear documento{% endblock %}
+{% block content %}
+{% include 'training_report/includes/training_report_menu.html'%}
+<div class="container mt-4">
+    <h2>Consulta a Inteligencia Artificial</h2>
+    
+    <form method="POST" class="mb-4">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="consulta_texto">Escribe tu consulta:</label>
+            <textarea name="consulta_texto" id="consulta_texto" class="form-control" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Enviar consulta</button>
+    </form>
+    
+    {% if resultado %}
+    <div class="card">
+        <div class="card-header">
+            <h4>Respuesta</h4>
+        </div>
+        <div class="card-body">
+            <div class="resultado-ia">{{ resultado|linebreaks }}</div>
+        </div>
+        {% if token_info %}
+        <div class="card-footer text-muted">
+            <small>
+                Tokens usados: {{ token_info.total_tokens }} 
+                (Prompt: {{ token_info.prompt_tokens }}, 
+                Respuesta: {{ token_info.response_tokens }})
+            </small>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

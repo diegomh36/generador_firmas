@@ -729,12 +729,12 @@ def generar_pdf(request):
         p.save()
         return response
 
-with open("token.config", "r") as token_file:
+""" with open("token.config", "r") as token_file:
     api_key = token_file.read().strip()
     
-genai.configure(api_key=api_key)
+genai.configure(api_key=api_key) """
 
-'''genai.configure(api_key=os.environ.get('GOOGLE_API_KEY')) '''
+genai.configure(api_key=os.environ.get('GOOGLE_API_KEY')) 
 
 def analizar_imagenes_comida(request, mensaje_prompt=None):
     resultado = None
@@ -817,6 +817,54 @@ def analizar_imagenes_comida(request, mensaje_prompt=None):
 def analizar_imagenes_personalizado(request):
     mensaje_prompt = "De las siguientes imagenes de comida dame una receta para reaprovechar las sobras"
     return analizar_imagenes_comida(request, mensaje_prompt=mensaje_prompt)
+
+def crear_rueda_alimentos(request):
+    resultado = None
+    token_info = None
+    
+    if request.method == 'POST':
+        consulta_texto = request.POST.get('consulta_texto', '')
+        
+        if consulta_texto:
+            try:
+                prompt = "A partir de la siguiente rueda de alimentos: " + consulta_texto + \
+                """Crea un menu semanal para un buffet de hotel donde incluyas almuerzo y cena con mínimo 2 platos principales.
+                Idealmente la rueda de alimentos debe ser variada, equilibrada y sostenible, si hay elementos del lunes que se pueden reaprovechar para otro día mejor.
+                Señala las comidas que se pueden reaprovechar de otros días en el menu."""
+                
+                # Llamada a la API 
+                model = genai.GenerativeModel('gemini-2.0-flash', 
+                                             system_instruction="Solo responde con la información solicitada, nada más.")
+                
+                response = model.generate_content(prompt)
+                resultado = response.text
+                
+                # Recopilación de información sobre tokens 
+                if hasattr(response, 'usage_metadata'):
+                    token_info = {
+                        'prompt_tokens': response.usage_metadata.prompt_token_count,
+                        'response_tokens': response.usage_metadata.candidates_token_count,
+                        'total_tokens': response.usage_metadata.total_token_count,
+                    }
+                    print("Tokens usados:", token_info) 
+
+                data = {
+                    "hour": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "prompt": prompt,
+                    "response": resultado,
+                    "tokens": token_info.get('total_tokens', 'N/A') if token_info else 'N/A'
+                }
+                export_to_txt(data, "ruedas_alimentos.txt", mode=1)
+                
+            except Exception as e:
+                resultado = f"Error al llamar a la API de Gemini: {e}"
+                print(f"Error en Gemini API: {e}")
+                token_info = None
+    
+    return render(request, 'training_report/crear_rueda_alimentos.html', {
+        'resultado': resultado,
+        'token_info': token_info
+    })
 
 class AnalizarImagenesProporcionView(View):
     template_name = 'training_report/analizar_imagenes_proporciones.html'

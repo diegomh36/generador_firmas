@@ -7,12 +7,12 @@
     </button>
     <div class="collapse navbar-collapse" id="nep">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
+        {% comment %} <li class="nav-item">
           <a class="nav-link" href="{% url 'training_report:create_training' %}"><i>Crear documento</i></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'training_report:training_report' %}"><i>Listar documentos</i></a>
-        </li>
+        </li> {% endcomment %}
         <li class="nav-item">
           <a class="nav-link" href="{% url 'training_report:analizar_comida' %}"><i>Analizar comida</i></a>
         </li>
@@ -21,6 +21,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'training_report:analizar_imagenes_proporcion' %}"><i>Calcular proporcion de desperdicio</i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'training_report:crear_rueda_alimentos' %}"><i>Crear rueda de alimentos</i></a>
         </li>
       </ul>
     </div>
