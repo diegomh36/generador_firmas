@@ -1,0 +1,158 @@
+
+Hour: 2025-04-04 10:51:33
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada
+     Solo responde con la información solicitada, nada más.
+Response: Patatas: 90%
+Ajo: 10%
+
+Tokens Used: 320
+--------------------------------------------------
+
+Hour: 2025-04-04 10:51:38
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada
+     Solo responde con la información solicitada, nada más.
+Response: Maíz y guisantes en proporciones aproximadamente iguales.
+
+Tokens Used: 316
+--------------------------------------------------
+
+Hour: 2025-04-04 10:58:29
+Prompt: De las siguientes imagenes de comida dame una receta para reaprovechar las sobras Solo responde con la información solicitada, nada más.
+Response: Ensalada fría de sobras: Mezcla las sobras de maíz y guisantes con cebolla picada, mayonesa, sal y pimienta. Sirve frío como guarnición o relleno para sándwiches.
+Tokens Used: 327
+--------------------------------------------------
+
+Hour: 2025-04-04 10:58:29
+Prompt: De las siguientes imagenes de comida dame una receta para reaprovechar las sobras Solo responde con la información solicitada, nada más.
+Response: **Ensalada de Maíz y Guisantes con Vinagreta de Hierbas**
+
+1.  **Mezclar las sobras:** Combina el maíz y los guisantes sobrantes en un tazón.
+2.  **Preparar la vinagreta:** Mezcla aceite de oliva, vinagre, hierbas frescas picadas (perejil, cilantro, albahaca), sal y pimienta.
+3.  **Aderezar y servir:** Vierte la vinagreta sobre el maíz y los guisantes, mezcla bien y sirve como acompañamiento o ensalada fresca.
+Tokens Used: 400
+--------------------------------------------------
+
+Hour: 2025-04-04 11:39:50
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada
+     Solo responde con la información solicitada, nada más.
+Response: Maíz: 60%, Guisantes: 40%.
+
+Tokens Used: 319
+--------------------------------------------------
+
+Hour: 2025-04-04 11:45:38
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada
+     Solo responde con la información solicitada, nada más.
+Response: Fideos: 100%
+
+Tokens Used: 313
+--------------------------------------------------
+
+Hour: 2025-04-04 11:47:16
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada
+     Solo responde con la información solicitada, nada más.
+Response: Fideos.
+
+Tokens Used: 308
+--------------------------------------------------
+
+Hour: 2025-04-04 11:59:01
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 2 kg. Solo responde con la información solicitada, nada más.
+Response: Fideos: 2 kg
+
+Tokens Used: 321
+--------------------------------------------------
+
+Hour: 2025-04-04 11:59:01
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 2 kg. Solo responde con la información solicitada, nada más.
+Response: Fideos: 2 kg
+Tokens Used: 320
+--------------------------------------------------
+
+Hour: 2025-04-04 11:59:14
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 2 kg. Solo responde con la información solicitada, nada más.
+Response: Papas con ajo: 2 kg.
+
+Tokens Used: 324
+--------------------------------------------------
+
+Hour: 2025-04-04 11:59:49
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 1 kg incluyendo todos los alimentos que se encuentran en la imagen. Solo responde con la información solicitada, nada más.
+Response: Maíz (60%), guisantes (40%).
+
+Tokens Used: 337
+--------------------------------------------------
+
+Hour: 2025-04-04 12:04:44
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 1 kg incluyendo todos los alimentos que se encuentran en la imagen. Solo responde con la información solicitada, nada más.
+Response: Patatas: 900 gramos
+Ajo: 100 gramos
+
+Tokens Used: 342
+--------------------------------------------------
+
+Hour: 2025-04-04 12:05:32
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 1 kg incluyendo todos los alimentos que se encuentran en la imagen. Solo responde con la información solicitada, nada más.
+Response: Fideos: 1 kg.
+Tokens Used: 331
+--------------------------------------------------
+
+Hour: 2025-04-04 12:06:01
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 1 kg incluyendo todos los alimentos que se encuentran en la imagen. Solo responde con la información solicitada, nada más.
+Response: *   **Vegetales de hoja verde:** 30%
+*   **Tomate:** 25%
+*   **Maíz:** 20%
+*   **Calabacín:** 25%
+Tokens Used: 372
+--------------------------------------------------
+
+Hour: 2025-04-04 12:06:08
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 1 kg incluyendo todos los alimentos que se encuentran en la imagen. Solo responde con la información solicitada, nada más.
+Response: *   **Verduras de hoja verde:** 30%
+*   **Tomate:** 25%
+*   **Maíz:** 20%
+*   **Calabacín:** 25%
+Tokens Used: 372
+--------------------------------------------------
+
+Hour: 2025-04-04 12:08:33
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion y peso de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 1 kg incluyendo todos los alimentos que se encuentran en la imagen. Solo responde con la información solicitada, nada más.
+Response: *   **Arúgula:** 30%, 300 gramos.
+*   **Maíz:** 25%, 250 gramos.
+*   **Tomate:** 25%, 250 gramos.
+*   **Calabacín:** 20%, 200 gramos.
+Tokens Used: 396
+--------------------------------------------------
+
+Hour: 2025-04-04 12:10:04
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion y peso de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 1 kg incluyendo todos los alimentos que se encuentran en la imagen. Solo responde con la información solicitada, nada más.
+Response: Fideos: 100%, 1 kg.
+Tokens Used: 338
+--------------------------------------------------
+
+Hour: 2025-04-04 12:12:18
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion y peso de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 2.3 kg incluyendo todos los alimentos que se encuentran en la imagen. Solo responde con la información solicitada, nada más.
+Response: *   **Tipo de comida:** Ensalada.
+*   **Ingredientes (aproximado):**
+    *   Lechuga/Espinaca: 40%, 920 g
+    *   Maíz: 25%, 575 g
+    *   Tomate: 20%, 460 g
+    *   Calabaza: 15%, 345 g
+Tokens Used: 417
+--------------------------------------------------
