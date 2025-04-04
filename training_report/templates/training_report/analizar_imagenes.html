@@ -7,7 +7,7 @@
 {% include 'training_report/includes/training_report_menu.html'%}
 <div class="container mt-5">
     <h1>Analizar Imagen de Comida</h1>
-    <form method="post" enctype="multipart/form-data">
+    <form method="post" enctype="multipart/form-data" action="{% url 'training_report:analizar_imagenes_personalizado' %}">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-primary">Analizar Imágenes</button>

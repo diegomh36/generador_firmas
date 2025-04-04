@@ -727,118 +727,25 @@ def generar_pdf(request):
         p.save()
         return response
 
-with open("token.config", "r") as token_file:
+""" with open("token.config", "r") as token_file:
     api_key = token_file.read().strip()
     
-genai.configure(api_key=api_key)
+genai.configure(api_key=api_key) """
 
-def analizar_imagen_comida(request):
+genai.configure(api_key=os.environ.get('GOOGLE_API_KEY'))
+
+def analizar_imagenes_comida(request, mensaje_prompt=None):
     resultado = None
     token_info = None
-    form = ImagenForm()
+    form = ImagenForm(request.POST, request.FILES)
 
     if request.method == 'POST':
-        form = ImagenForm(request.POST, request.FILES)
         if form.is_valid():
-            imagen_file = request.FILES['imagen']
-            img_data_to_send = None # Variable para guardar los datos de imagen procesados
+            imagenes_files = request.FILES.getlist('imagen')
+            imagenes_data_to_send = []
 
-            # --- Inicio: Preprocesamiento de Imagen con Pillow ---
-            try:
-                img = Image.open(imagen_file)
-
-                # Opcional: Convertir a RGB si es RGBA o Paleta (necesario para JPEG)
-                if img.mode in ("RGBA", "P"):
-                    img = img.convert("RGB")
-
-                # --- Redimensionar la Imagen ---
-                # Ajustar el tamaño de la imagen si es necesario para ahorrar tokens
-                target_size = (250, 250)
-                img.thumbnail(target_size, Image.Resampling.LANCZOS) 
-
-                # --- Guardar en un buffer en memoria (formato JPEG con calidad ajustable) ---
-                buffer = io.BytesIO()
-                mime_type = 'image/jpeg'
-                # Ajustar la calidad si es necesario para ahorrar tokens
-                quality = 100
-                img.save(buffer, format="JPEG", quality=quality)
-
-                # Obtener los bytes y codificar en Base64
-                imagen_bytes = buffer.getvalue()
-                imagen_base64 = base64.b64encode(imagen_bytes).decode('utf-8')
-
-                img_data_to_send = {"mime_type": mime_type, "data": imagen_base64}
-                print(f"Imagen preprocesada: Tamaño max ~{target_size}px, Calidad JPEG ~{quality}")
-
-            except Exception as e:
-                print(f"Error al procesar imagen con Pillow: {e}. Se usará la imagen original.")
-                # Fallback: Si falla el procesamiento, usa la imagen original
-                imagen_file.seek(0) # Importante resetear el puntero del archivo
-                imagen_base64_original = base64.b64encode(imagen_file.read()).decode('utf-8')
-                img_data_to_send = {"mime_type": imagen_file.content_type, "data": imagen_base64_original}
-            # --- Fin: Preprocesamiento de Imagen ---
-
-
-            # --- Llamada a la API con la imagen (posiblemente) procesada ---
-            if img_data_to_send:
-                # Define el prompt que actuará como instrucción del sistema
-                system_prompt = """
-                A partir de la imagen de comida sobrante solo di:
-                - Categoría (Carne, Pescado, carne o pescado en salsa, marisco)
-                - Subcategoría
-                - Información adicional del plato
-                - Posibles ingredientes
-                - Recomendaciones para recalentar y aprovechar las sobras
-                """
-                # Inicializa el modelo con la instrucción del sistema
-                model = genai.GenerativeModel(
-                    'gemini-2.0-flash', 
-                    system_instruction=system_prompt
-                )
-
-                # Envía SOLO la imagen (procesada o la original si hubo error)
-                try:
-                    response = model.generate_content([img_data_to_send]) # <--- USA LA IMAGEN PROCESADA
-                    resultado = response.text
-
-                    # Obtener información de tokens
-                    if hasattr(response, 'usage_metadata'):
-                        token_info = {
-                            'prompt_tokens': response.usage_metadata.prompt_token_count,
-                            'response_tokens': response.usage_metadata.candidates_token_count,
-                            'total_tokens': response.usage_metadata.total_token_count,
-                        }
-                        print("Tokens usados (con imagen procesada):", token_info)
-
-                except Exception as e:
-                    resultado = f"Error al llamar a la API de Gemini: {e}"
-                    print(f"Error en Gemini API: {e}")
-                    token_info = None
-            else:
-                # Esto solo ocurriría si img_data_to_send es None por alguna razón inesperada
-                resultado = "Error: No se pudieron preparar los datos de la imagen."
-
-
-    return render(request, 'training_report/analizar_imagen.html', {
-        'form': form,
-        'resultado': resultado,
-        'token_info': token_info
-    })
-
-""" def analizar_imagenes_comidas(request):
-    resultado = None
-    token_info = None
-    form = ImagenForm()
-
-    if request.method == 'POST':
-        form = ImagenForm(request.POST, request.FILES)
-        if form.is_valid():
-            model = genai.GenerativeModel('gemini-2.0-flash')
-            
-
-            # Procesar todas las imágenes subidas
-            img_data_list = []
-            for imagen_file in request.FILES.getlist('imagen'):  # Obtener lista de imágenes
+            for imagen_file in imagenes_files:
+                img_data_to_send = None
                 try:
                     img = Image.open(imagen_file)
                     if img.mode in ("RGBA", "P"):
@@ -846,36 +753,61 @@ def analizar_imagen_comida(request):
                     target_size = (250, 250)
                     img.thumbnail(target_size, Image.Resampling.LANCZOS)
                     buffer = io.BytesIO()
-                    img.save(buffer, format="JPEG", quality=90)
-                    imagen_base64 = base64.b64encode(buffer.getvalue()).decode('utf-8')
-                    img_data_list.append({"mime_type": 'image/jpeg', "data": imagen_base64})
+                    mime_type = 'image/jpeg'
+                    quality = 100
+                    img.save(buffer, format="JPEG", quality=quality)
+                    imagen_bytes = buffer.getvalue()
+                    imagen_base64 = base64.b64encode(imagen_bytes).decode('utf-8')
+                    img_data_to_send = {"mime_type": mime_type, "data": imagen_base64}
+                    print(f"Imagen preprocesada: Tamaño max ~{target_size}px, Calidad JPEG ~{quality}")
                 except Exception as e:
-                    print(f"Error procesando {imagen_file.name}: {e}")
-                    # Fallback: imagen sin procesar
+                    print(f"Error al procesar imagen con Pillow: {e}. Se usará la imagen original.")
                     imagen_file.seek(0)
-                    imagen_base64 = base64.b64encode(imagen_file.read()).decode('utf-8')
-                    img_data_list.append({"mime_type": imagen_file.content_type, "data": imagen_base64})
+                    imagen_base64_original = base64.b64encode(imagen_file.read()).decode('utf-8')
+                    img_data_to_send = {"mime_type": imagen_file.content_type, "data": imagen_base64_original}
 
-            # Llamada a Gemini con TODAS las imágenes
-            if img_data_list:
+                imagenes_data_to_send.append(img_data_to_send)
+
+            # --- Llamada a la API con la lista de imágenes ---
+            if imagenes_data_to_send:
+                prompt = (mensaje_prompt + "Solo responde con la información solicitada, nada más.") if mensaje_prompt else """
+                Imagenes de comida sobrante da una respuesta de la siguiente forma para cada imagen:
+                - Categoría (Carne, Pescado, carne o pescado en salsa, marisco)
+                - Subcategoría
+                - Información adicional del plato
+                - Posibles ingredientes
+                - Recomendaciones para recalentar y aprovechar las sobras
+                Solo responde con la información solicitada, nada más.
+                """
+                model = genai.GenerativeModel('gemini-2.0-flash', system_instruction=prompt)
                 try:
-                    # Combina el prompt y las imágenes en un solo mensaje
-                    response = model.generate_content([prompt] + img_data_list)
+                    response = model.generate_content(imagenes_data_to_send)
                     resultado = response.text
-
-                    # Opcional: Mostrar tokens usados
                     if hasattr(response, 'usage_metadata'):
                         token_info = {
+                            'prompt_tokens': response.usage_metadata.prompt_token_count,
+                            'response_tokens': response.usage_metadata.candidates_token_count,
                             'total_tokens': response.usage_metadata.total_token_count,
-                            'imagenes': len(img_data_list)
                         }
+                        print("Tokens usados (con imágenes procesadas):", token_info)
                 except Exception as e:
-                    resultado = f"Error en Gemini: {str(e)}"
+                    resultado = f"Error al llamar a la API de Gemini: {e}"
+                    print(f"Error en Gemini API: {e}")
+                    token_info = None
             else:
-                resultado = "No se subieron imágenes válidas."
-
-    return render(request, 'training_report/analizar_imagenes.html', {
+                resultado = "Error: No se pudieron preparar los datos de las imágenes."
+    return render(request, 'training_report/analizar_imagen.html', {
         'form': form,
         'resultado': resultado,
         'token_info': token_info
-    }) """
+    })
+
+def analizar_imagenes_personalizado(request):
+    mensaje_prompt = "De las siguientes imagenes de comida dame una receta para reaprovechar las sobras"
+    return analizar_imagenes_comida(request, mensaje_prompt=mensaje_prompt)
+
+def analizar_imagenes_proporcion(request):
+    mensaje_prompt = """De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada
+    """
+    return analizar_imagenes_comida(request, mensaje_prompt=mensaje_prompt)

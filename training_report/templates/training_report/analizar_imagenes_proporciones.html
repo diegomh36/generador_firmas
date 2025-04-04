@@ -6,9 +6,9 @@
 {% block content %}
 {% include 'training_report/includes/training_report_menu.html'%}
 <div class="container mt-5">
-    <h1>Analizar Imagen de Comida</h1>
+    <h1>Devolver proporciones de comida según las imagenes aportadas</h1>
     
-    <form method="post" enctype="multipart/form-data">
+    <form method="post" enctype="multipart/form-data" action="{% url 'training_report:analizar_imagenes_proporcion' %}">
         {% csrf_token %}
         <input type="file" name="imagen" multiple>
         <div class="form-group">

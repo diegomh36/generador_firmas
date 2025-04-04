@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -127,7 +128,7 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Clave para usar API de Google
-GOOGLE_API_KEY = 'INTRODUZCAN AQUÍ SU CLAVE DE API'
+GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY')
 
 # Configuración para envío de correos (falta poner clave en variable)
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

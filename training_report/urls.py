@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import TrainingReportListView, TrainingReportCreate, TrainingReportUpdate, TrainingReportDelete, create_training, sign_training, generate_pdf, final_training_view, send_email, analizar_imagen_comida
+from .views import TrainingReportListView, TrainingReportCreate, TrainingReportUpdate, TrainingReportDelete, create_training, sign_training, generate_pdf, final_training_view, send_email, analizar_imagenes_comida, analizar_imagenes_personalizado, analizar_imagenes_proporcion
 
 TrainingReports_patterns = ([ 
     path('', TrainingReportListView.as_view(), name='training_report'),
@@ -11,7 +11,10 @@ TrainingReports_patterns = ([
     path('generate_pdf/<int:training_id>/', generate_pdf, name='generate_pdf'),
     path('final_training/<int:training_id>/', final_training_view, name='final_training'),
     path('<int:training_id>/', send_email, name='send_email'),
-    path('analizar_comida/', analizar_imagen_comida, name='analizar_comida'),
+    path('analizar_comida/', analizar_imagenes_comida, name='analizar_comida'),
+    path('analizar_imagenes_personalizado/', analizar_imagenes_personalizado, name='analizar_imagenes_personalizado'),
+    path('analizar_imagenes_proporcion/', analizar_imagenes_proporcion, name='analizar_imagenes_proporcion'),
+
 
 ], 'training_report')
 
