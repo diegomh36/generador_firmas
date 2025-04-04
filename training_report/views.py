@@ -27,6 +27,8 @@ import json
 from django.http import JsonResponse
 from django.core.mail import EmailMessage
 from .models import TrainingReport, Signature
+from .utils import *
+from django.views import View
 
 class StaffRequiredMixin(object):
     """
@@ -727,12 +729,12 @@ def generar_pdf(request):
         p.save()
         return response
 
-""" with open("token.config", "r") as token_file:
+with open("token.config", "r") as token_file:
     api_key = token_file.read().strip()
     
-genai.configure(api_key=api_key) """
+genai.configure(api_key=api_key)
 
-genai.configure(api_key=os.environ.get('GOOGLE_API_KEY'))
+'''genai.configure(api_key=os.environ.get('GOOGLE_API_KEY')) '''
 
 def analizar_imagenes_comida(request, mensaje_prompt=None):
     resultado = None
@@ -770,7 +772,7 @@ def analizar_imagenes_comida(request, mensaje_prompt=None):
 
             # --- Llamada a la API con la lista de imágenes ---
             if imagenes_data_to_send:
-                prompt = (mensaje_prompt + "Solo responde con la información solicitada, nada más.") if mensaje_prompt else """
+                prompt = (mensaje_prompt + " Solo responde con la información solicitada, nada más.") if mensaje_prompt else """
                 Imagenes de comida sobrante da una respuesta de la siguiente forma para cada imagen:
                 - Categoría (Carne, Pescado, carne o pescado en salsa, marisco)
                 - Subcategoría
@@ -790,6 +792,16 @@ def analizar_imagenes_comida(request, mensaje_prompt=None):
                             'total_tokens': response.usage_metadata.total_token_count,
                         }
                         print("Tokens usados (con imágenes procesadas):", token_info)
+
+                    # --- Export the prompt, response, and tokens to a TXT file ---
+                    data = {
+                        "hour": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                        "prompt": prompt,
+                        "response": resultado,
+                        "tokens": token_info.get('total_tokens', 'N/A') if token_info else 'N/A'
+                    }
+                    export_to_txt(data, "analisis_proporcion_comida.txt", mode=1)
+
                 except Exception as e:
                     resultado = f"Error al llamar a la API de Gemini: {e}"
                     print(f"Error en Gemini API: {e}")
@@ -806,8 +818,29 @@ def analizar_imagenes_personalizado(request):
     mensaje_prompt = "De las siguientes imagenes de comida dame una receta para reaprovechar las sobras"
     return analizar_imagenes_comida(request, mensaje_prompt=mensaje_prompt)
 
-def analizar_imagenes_proporcion(request):
-    mensaje_prompt = """De las siguientes imagenes de sobras de comida 
-    ¿cual es la proporcion de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada
-    """
-    return analizar_imagenes_comida(request, mensaje_prompt=mensaje_prompt)
+class AnalizarImagenesProporcionView(View):
+    template_name = 'training_report/analizar_imagenes_proporciones.html'
+    base_prompt = """De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion y peso de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada"""
+
+    def get(self, request, *args, **kwargs):
+        # Render the form for GET requests
+        form = ImagenForm()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request, *args, **kwargs):
+        # Handle the POST request
+        form = ImagenForm(request.POST, request.FILES)
+        peso = request.POST.get('peso', None)  # Get the weight from the form
+
+        if form.is_valid() and peso:
+            try:
+                # Append the weight to the prompt
+                mensaje_prompt = f"{self.base_prompt}. El peso total de la comida es {peso} kg incluyendo todos los alimentos que se encuentran en la imagen."
+
+                # Call the analizar_imagenes_comida logic
+                return analizar_imagenes_comida(request, mensaje_prompt=mensaje_prompt)
+            except Exception as e:
+                return render(request, self.template_name, {'form': form, 'error': str(e)})
+        else:
+            return render(request, self.template_name, {'form': form, 'error': 'Por favor, introduce un peso válido.'})

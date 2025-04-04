@@ -16,6 +16,33 @@
         </div>
     </form>
 
+    <h2> Devolver proporciones de comida según el peso introducido</h2>
+    <form method="post" enctype="multipart/form-data" action="{% url 'training_report:analizar_imagenes_proporcion' %}">
+        {% csrf_token %}
+        <input type="file" name="imagen" multiple>
+        <div class="form-group">
+            <label for="peso">Peso de la comida (en kg):</label>
+            <input id="peso" type="floatformat" name="peso" required>
+            <button type="submit" id="analizar-button" disabled>Analizar</button>
+        </div>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const pesoInput = document.getElementById('peso');
+            const analizarButton = document.getElementById('analizar-button');
+    
+            // Enable the button only if the weight input has a value
+            pesoInput.addEventListener('input', function () {
+                if (pesoInput.value.trim() !== '' && parseFloat(pesoInput.value) > 0) {
+                    analizarButton.disabled = false;
+                } else {
+                    analizarButton.disabled = true;
+                }
+            });
+        });
+    </script>
+    
     {% if resultado %}
         <h2>Resultado:</h2>
         <p>{{ resultado }}</p>

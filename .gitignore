@@ -7,3 +7,8 @@ token.config
 # Ignorar pipfiles
 Pipfile
 Pipfile.lock
+
+# ignorar archivos output
+training_report\static\training_report\pdfs/
+training_report\static\training_report\output\image_with_context/
+training_report\static\training_report\output\image_without_context/
