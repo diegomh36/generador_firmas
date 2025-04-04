@@ -731,12 +731,22 @@ def generar_pdf(request):
     api_key = token_file.read().strip()
     
 genai.configure(api_key=api_key) """
-
 genai.configure(api_key=os.environ.get('GOOGLE_API_KEY'))
+
+def get_chat_history(request):
+    """Obtiene el historial de chat de la sesión."""
+    return request.session.get('chat_history', [])
+
+def set_chat_history(request, history):
+    """Guarda el historial de chat en la sesión."""
+    request.session['chat_history'] = history
+    request.session.modified = True
 
 def analizar_imagenes_comida(request, mensaje_prompt=None):
     resultado = None
     token_info = None
+    # --- Manejo del historial de conversación ---
+    chat_history = get_chat_history(request) or []
     form = ImagenForm(request.POST, request.FILES)
 
     if request.method == 'POST':
@@ -768,9 +778,10 @@ def analizar_imagenes_comida(request, mensaje_prompt=None):
 
                 imagenes_data_to_send.append(img_data_to_send)
 
+
             # --- Llamada a la API con la lista de imágenes ---
             if imagenes_data_to_send:
-                prompt = (mensaje_prompt + "Solo responde con la información solicitada, nada más.") if mensaje_prompt else """
+                prompt = mensaje_prompt if mensaje_prompt else """
                 Imagenes de comida sobrante da una respuesta de la siguiente forma para cada imagen:
                 - Categoría (Carne, Pescado, carne o pescado en salsa, marisco)
                 - Subcategoría
@@ -779,10 +790,20 @@ def analizar_imagenes_comida(request, mensaje_prompt=None):
                 - Recomendaciones para recalentar y aprovechar las sobras
                 Solo responde con la información solicitada, nada más.
                 """
-                model = genai.GenerativeModel('gemini-2.0-flash', system_instruction=prompt)
+
+                model = genai.GenerativeModel('gemini-2.0-flash')
+                chat = model.start_chat(history=chat_history)  # Se carga el historial de la sesión
+                
                 try:
-                    response = model.generate_content(imagenes_data_to_send)
+                    response = chat.send_message([prompt] + imagenes_data_to_send)
                     resultado = response.text
+
+                    # Guardar historial
+                    chat_history.append({"role": "user", "parts": [prompt]})
+                    chat_history.append({"role": "model", "parts": [resultado]})
+                    set_chat_history(request, chat_history)
+
+                    # Información de tokens
                     if hasattr(response, 'usage_metadata'):
                         token_info = {
                             'prompt_tokens': response.usage_metadata.prompt_token_count,
@@ -790,16 +811,19 @@ def analizar_imagenes_comida(request, mensaje_prompt=None):
                             'total_tokens': response.usage_metadata.total_token_count,
                         }
                         print("Tokens usados (con imágenes procesadas):", token_info)
+
                 except Exception as e:
                     resultado = f"Error al llamar a la API de Gemini: {e}"
                     print(f"Error en Gemini API: {e}")
                     token_info = None
             else:
                 resultado = "Error: No se pudieron preparar los datos de las imágenes."
+
     return render(request, 'training_report/analizar_imagen.html', {
         'form': form,
         'resultado': resultado,
-        'token_info': token_info
+        'token_info': token_info,
+        'chat_history': chat_history  #  historial de conversación
     })
 
 def analizar_imagenes_personalizado(request):

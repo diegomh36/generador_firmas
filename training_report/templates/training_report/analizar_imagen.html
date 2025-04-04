@@ -20,5 +20,11 @@
         <h2>Resultado:</h2>
         <p>{{ resultado }}</p>
     {% endif %}
+    <h3>Historial de Conversación:</h3>
+<ul>
+    {% for message in chat_history %}
+        <li><strong>{{ message.role }}</strong>: {{ message.parts|join:" " }}</li>
+    {% endfor %}
+</ul>
 </div>
 {% endblock %}

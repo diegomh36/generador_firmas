@@ -1,5 +1,6 @@
 # Ignorar vscode
 .vscode/
+.env
 
 # TOKENS
 token.config
