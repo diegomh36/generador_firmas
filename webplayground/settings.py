@@ -128,9 +128,9 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Clave para usar API de Google
-GOOGLE_API_KEY = 'AIzaSyAVOmfLDIVOahe1MtNxLAWLTbL8pIIIdS8'
+GOOGLE_API_KEY = ''
 # Clave para usar API de OpenAI
-OPENAI_API_KEY = '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'
+OPENAI_API_KEY = ''
 
 
 # Configuración para envío de correos (falta poner clave en variable)
