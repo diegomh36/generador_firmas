@@ -550,10 +550,10 @@ def generar_pdf(request):
         content_ids = request.POST.getlist('contents')  
         selected_contents = Content.objects.filter(id__in=content_ids)
 
-        ruta_logotipo = os.path.join(settings.BASE_DIR, "pages\static\pages\img\logotipo.png")
-        ruta_correo = os.path.join(settings.BASE_DIR, "pages\static\pages\img\correo.PNG")
-        ruta_movil = os.path.join(settings.BASE_DIR, "pages\static\pages\img\movil.PNG")
-        ruta_world = os.path.join(settings.BASE_DIR, "pages\static\pages\img\world.PNG")
+        ruta_logotipo = os.path.join(settings.BASE_DIR, "pages/static/pages/img/logotipo.png")
+        ruta_correo = os.path.join(settings.BASE_DIR, "pages/static/pages/img/correo.PNG")
+        ruta_movil = os.path.join(settings.BASE_DIR, "pages/static/pages/img/movil.PNG")
+        ruta_world = os.path.join(settings.BASE_DIR, "pages/static/pages/img/world.PNG")
         pdfmetrics.registerFont(TTFont('Roboto-Regular', 'pages/static/pages/fonts/RobotoSlab-Regular.ttf'))
         pdfmetrics.registerFont(TTFont('Roboto-Medium', 'pages/static/pages/fonts/RobotoSlab-Medium.ttf'))
         pdfmetrics.registerFont(TTFont('Roboto-Bold', 'pages/static/pages/fonts/RobotoSlab-Bold.ttf'))
@@ -772,14 +772,20 @@ def analizar_imagenes_comida(request, mensaje_prompt=None):
 
             # --- Llamada a la API con la lista de imágenes ---
             if imagenes_data_to_send:
-                prompt = (mensaje_prompt + " Solo responde con la información solicitada, nada más.") if mensaje_prompt else """
-                Imagenes de comida sobrante da una respuesta de la siguiente forma para cada imagen:
-                - Categoría (Carne, Pescado, carne o pescado en salsa, marisco)
-                - Subcategoría
-                - Información adicional del plato
-                - Posibles ingredientes
-                - Recomendaciones para recalentar y aprovechar las sobras
-                Solo responde con la información solicitada, nada más.
+                prompt = (mensaje_prompt + " Estructura tu respuesta en formato JSON para facilitar su procesamiento.") if mensaje_prompt else """
+                Analiza estas imágenes de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+                {
+                    "imagenes": [
+                        {
+                            "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                            "subcategoria": "Especificación más detallada",
+                            "descripcion": "Información adicional del plato",
+                            "ingredientes": ["ingrediente1", "ingrediente2", "..."],
+                            "recomendaciones": "Sugerencias para aprovechar las sobras"
+                        }
+                    ]
+                }
+                Responde ÚNICAMENTE con el JSON, sin texto adicional antes o después.
                 """
                 model = genai.GenerativeModel('gemini-2.0-flash', system_instruction=prompt)
                 try:
@@ -800,7 +806,7 @@ def analizar_imagenes_comida(request, mensaje_prompt=None):
                         "response": resultado,
                         "tokens": token_info.get('total_tokens', 'N/A') if token_info else 'N/A'
                     }
-                    export_to_txt(data, "analisis_proporcion_comida.txt", mode=1)
+                    export_to_txt(data, "analisis_proporcion_comida.json", mode=1)
 
                 except Exception as e:
                     resultado = f"Error al llamar a la API de Gemini: {e}"
@@ -815,13 +821,12 @@ def analizar_imagenes_comida(request, mensaje_prompt=None):
     })
 
 def analizar_imagenes_personalizado(request):
-    mensaje_prompt = "De las siguientes imagenes de comida dame una receta para reaprovechar las sobras"
+    mensaje_prompt = ""
     return analizar_imagenes_comida(request, mensaje_prompt=mensaje_prompt)
 
 class AnalizarImagenesProporcionView(View):
     template_name = 'training_report/analizar_imagenes_proporciones.html'
-    base_prompt = """De las siguientes imagenes de sobras de comida 
-    ¿cual es la proporcion y peso de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada"""
+    base_prompt = """"""
 
     def get(self, request, *args, **kwargs):
         # Render the form for GET requests

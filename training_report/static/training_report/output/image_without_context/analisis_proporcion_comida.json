@@ -1,0 +1,12 @@
+[
+  {
+    "food_items": [
+      {
+        "name": "Mejillones",
+        "estimated_weight_kg": 4
+      }
+    ],
+    "total_estimated_weight_kg": 4,
+    "timestamp": "2025-04-04_14-36-49"
+  }
+]
