@@ -1,12 +1,44 @@
 [
   {
-    "food_items": [
+    "imagenes": [
       {
-        "name": "Mejillones",
-        "estimated_weight_kg": 4
+        "categoria": "Pescado",
+        "subcategoria": "Marisco",
+        "descripcion": "Gambas cocidas en un plato.",
+        "ingredientes": [
+          {
+            "nombre": "Gambas",
+            "proporcion": "100%"
+          }
+        ],
+        "recomendaciones": "Añadir a ensaladas, preparar un salpicón o utilizarlas en un arroz."
       }
     ],
-    "total_estimated_weight_kg": 4,
-    "timestamp": "2025-04-04_14-36-49"
+    "timestamp": "2025-04-08_12-09-59"
+  },
+  {
+    "imagenes": [
+      {
+        "categoria": "Pescado",
+        "subcategoria": "Marisco",
+        "descripcion": "Mejillones al vapor con perejil",
+        "ingredientes": [
+          {
+            "nombre": "Mejillones",
+            "proporcion": "80%"
+          },
+          {
+            "nombre": "Caldo de cocción",
+            "proporcion": "15%"
+          },
+          {
+            "nombre": "Perejil",
+            "proporcion": "5%"
+          }
+        ],
+        "recomendaciones": "Se pueden usar para hacer croquetas, arroz marinero o una sopa de pescado."
+      }
+    ],
+    "timestamp": "2025-04-08_12-11-16"
   }
 ]

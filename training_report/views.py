@@ -772,7 +772,7 @@ def analizar_imagenes_comida(request, mensaje_prompt=None):
 
             # --- Llamada a la API con la lista de imágenes ---
             if imagenes_data_to_send:
-                prompt = (mensaje_prompt + " Estructura tu respuesta en formato JSON para facilitar su procesamiento.") if mensaje_prompt else """
+                prompt ="""
                 Analiza estas imágenes de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
                 {
                     "imagenes": [
@@ -780,7 +780,16 @@ def analizar_imagenes_comida(request, mensaje_prompt=None):
                             "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
                             "subcategoria": "Especificación más detallada",
                             "descripcion": "Información adicional del plato",
-                            "ingredientes": ["ingrediente1", "ingrediente2", "..."],
+                            "ingredientes": [
+                                {
+                                    "nombre": "ingrediente1",
+                                    "proporcion": "estimación en porcentaje o fracción del total"
+                                },
+                                {
+                                    "nombre": "ingrediente2",
+                                    "proporcion": "estimación en porcentaje o fracción del total"
+                                }
+                            ],
                             "recomendaciones": "Sugerencias para aprovechar las sobras"
                         }
                     ]
