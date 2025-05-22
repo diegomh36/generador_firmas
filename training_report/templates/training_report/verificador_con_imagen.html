@@ -1,0 +1,53 @@
+{% extends 'core/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}Verificar Noticia con Imagen{% endblock %}
+{% block content %}
+{% include 'training_report/includes/training_report_menu.html'%}
+<div class="container mt-5">
+    <h1>Verificar la Fiabilidad de una Noticia con Imagen</h1>
+    <p class="mt-3">Sube una imagen (por ejemplo, una captura de pantalla del titular o una parte de la noticia). La imagen es el único campo obligatorio.</p>
+
+    <form method="post" enctype="multipart/form-data"> {# ¡IMPORTANTE: enctype="multipart/form-data" para subir archivos! #}
+        {% csrf_token %}
+        {{ form|crispy }} {# Renderiza el campo de la imagen #}
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary mt-3">Analizar Imagen de Noticia</button>
+        </div>
+    </form>
+
+    {% if resultado %}
+        <h2 class="mt-4">Resultado de la Verificación:</h2>
+        {% if resultado.error %}
+            <div class="alert alert-danger" role="alert">
+                <strong>Error:</strong> {{ resultado.error }}
+            </div>
+        {% else %}
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Nivel de Fiabilidad: <span class="badge bg-primary">{{ resultado.nivel_fiabilidad|default:"No determinado" }}</span></h5>
+                    {% if resultado.resumen_evaluacion %}
+                        <p class="card-text"><strong>Resumen de la Evaluación:</strong> {{ resultado.resumen_evaluacion }}</p>
+                    {% endif %}
+                    {% if resultado.fuentes_soporte %}
+                        <h6 class="card-subtitle mb-2 text-muted">Fuentes de Soporte:</h6>
+                        <ul class="list-group list-group-flush">
+                            {% for fuente in resultado.fuentes_soporte %}
+                                <li class="list-group-item">{{ fuente }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    {% if resultado.posibles_sesgos %}
+                        <p class="card-text mt-3"><strong>Posibles Sesgos o Técnicas de Desinformación:</strong> {{ resultado.posibles_sesgos }}</p>
+                    {% endif %}
+                    {% if resultado.advertencias %}
+                        <div class="alert alert-warning mt-3" role="alert">
+                            <strong>Advertencias:</strong> {{ resultado.advertencias }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+</div>
+{% endblock %}

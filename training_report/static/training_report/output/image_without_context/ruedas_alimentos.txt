@@ -1768,3 +1768,1596 @@ Response: **Lunes**
 
 Tokens Used: 4184
 --------------------------------------------------
+
+Hour: 2025-04-07 14:51:08
+Prompt: A partir de la siguiente rueda de alimentos: PLATANO CON LECHE DE COCO
+SURTIDO BOLLERIA VARIADA
+BERLINA RELLENA Y FRUTOS ROJOS 
+TARTA DE MANDARINA 
+TARTA CAKE  DE MELOCOTON
+TARTA QUESO ARANDANOS 
+BROWNIE CHOCOLATE 
+MOUSSE DE CHOCOLATE Y NATA
+TARTA DE MANZANA
+TARTA DE QUESO NATA 
+NATA MONTADA
+NUBES
+QUESILLO CANARIO
+SUSPIRO URUGUAYO
+DULCES CANARIOS 
+MOUSSE
+CHESSE CAKE LIMON
+TIRAMISU
+CREME BRULLE
+TARTA  DE CHOCOLATE 
+CARROT CAKE 
+PASTEL DE QUESO AL HORNO CON DULCE DE LECHE 
+NATILLAS CON DULCE DE LECHE 
+MOUSSE DE MANGO Y CHOCOLATE
+TARTA DE PAPAYA
+PANACOTTA
+TARTA LIMON REDONDA
+TARTA CAKE DE FRUTOS ROJOS 
+CREMA CATALANA
+ARROZ CON LECHE
+TARTA ALMENDRAS
+BRAZO DE YEMA 
+CHURROS CON CHOCOLATE 
+SOPA DE POLLO CHINA
+GUMBO
+CREMA DE BERROS
+SOPA DE CEBOLLA 
+CREMA DE ELOTES (MAIZ)
+SOPA MINESTRONE
+PORRUSALDA
+crema de guisantes
+crema de coliflor
+crema de esparragos
+crema de tomate
+potaje de lentejas
+crema de calabaza
+TALLARINES CON VERDURA Y SOJA
+PENNE
+TORTELLINIS
+ESPAGUETIS
+Macarrones
+ESPIRALES
+Pasta tricolor
+TALLARINES
+Pasta seca corta
+pasta seca larga
+pasta fresca
+lasaña de carne 
+SALSA BOLOÑESA
+SALSA ARRABIATTA
+SALSA DE TOMATE Y ALBAHACA
+SALSA BOSCAIOLA
+SALSA TOMATE
+SALSA MARISCO
+SALSA CARBONARA
+SALSA DE GUINDILLA Y CHORIZO
+SALSA BBQ
+SALSA ESPAÑOLA
+SALSA DE PIMIENTA
+TERIYAKI CON DEMI GLACE 
+SALSA GRAVY
+SALSA BEARNESA
+SALSA PROVENZAL
+SALSA AMERICANA
+SALSA DE MENTA
+SALSA MEXICANA
+SALSA DE QUESO
+SALSA DE VINO TINTO
+Salsa pesto
+Salsa de Salmón 
+Salsa napolitana
+Salsa champis y tomate
+Salsa bechamel
+pesto rojo
+Salsa Cuatro Quesos
+Salsa Siciliana
+salsa champiñones
+ketchup
+Mojo Rojo 
+Mojo Verde 
+Mahonesa y Ali Oli 
+Salsa Rosa 
+Salsa tumaca
+Salsa bearnesa sueca fria
+Salsa remoulade danesa
+Salsa Tártara
+Salsa César
+Salsa crema agria y huevas
+SALSA TOMATILLO VERDE 
+Chimichurri
+Salsa remoulade
+Salsa vinagreta
+Salsa Mostaza miel y modena
+Mahonesa siracha
+Salsa mostaza miel
+MAHONESA TERIYAKI
+mostaza
+guacamole
+PIZZA CARNE MOLIDA 
+PIZZA BBQ POLLO  
+PIZZA TROPICAL
+PIZZA CHAMPIÑONES 
+PIZZA PICANTE JALAPEÑOS 
+PIZZA PEPERONI
+PIZZA VERDURAS 
+Pizza 4 quesos
+Pizza hawaiana
+Pizza vegetariana
+Pizza margarita
+Pizza  bacon y bbq
+Pizza pollo champis
+Pizza salami
+BIRYANI VERDURAS 
+JAMBALAYA 
+PAELLA DE CARNE
+PAELLA DE MARISCO
+ARROZ CHAIFA CON POLLO
+RISOTO CHAMPIÑONES 
+FIDEUA VERDURAS 
+arroz con pollo
+arroz marisco 
+Cous Cous
+ENSALADA DE ARROZ AL CURRY  CON POLLO Y PIÑA
+Bulgur
+arroz con verduras
+Quinoa roja
+POKE DE ATUN
+paella de sepia
+fideua de pescado
+Arroz al curry
+arroz blanco
+cocuscous con hortalizas
+CERDO AGRIDULCE
+CARNE BBQ
+POLLO SALMOREJO
+POLLO AL CURRY
+FAJITAS DE POLLO
+ESTOFADO CARNE MILANESA
+POLLO AL AJILLO 
+BROCHETA POLLO TERIYAKI
+KEBAB POLLO
+CHULETAS
+ENTRECOTE
+COSTILLAS
+POLLO
+HAMBURGUESA
+SALCHICHA FRESCA
+CONEJO EN SALSA
+CARNE FIESTA
+PATA DE CERDO ASADA
+COSTILLAS CON JENGIBRE Y MIEL 
+MINI HAMBURGUESAS
+PIERNA DE CORDERO 
+CHILE CON CARNE
+QUESADILLAS JAMON Y QUESO
+BIFE 
+POLLO CAZADORA 
+ESCALOPE DE POLLO
+LOMO DE CERDO ASADO CON ROMERO Y AJO
+ALBONDIGAS EN SALSA
+ENTRECOT 
+chuletas de cerdo 
+FILETES DE TERNERA
+pato a la naranja
+solomillo de cerdo 
+ternera salteada con bambú y soja
+filetes de pavo 
+Bacon frito en julianas
+Juliana de pollo asado
+solomillo de cerdo manzana asada al vino tinto
+brocheta de pollo
+secreto de cerdo ibérico
+jamoncitos de pollo fritos al ajillo 
+tabla de pollo relleno
+tabla de roast beef con mostaza
+bao de costillas con rucula,rabanos y bbq
+pollo strogonoff
+solomillo de cerdo
+perrito caliente
+SALMON A LA SAL
+CURRY DE  PESCADO 
+SALMON ESPECIES CAJUN 
+BACALAO ENCEBOLLADO
+SALMON EN SALSA DE ENELDO
+PESCADO A LA VERACRUZANA
+BACALAO LIVORNESA
+MERLUZA PLANCHA
+CABALLA ADOBADA
+FILETE DE PERCA 
+EMPERADOR ADOBADO
+fogonero al ajillo 
+Salpicón de caballa
+ROLLOS DE SALMON AHUMADO CON QUESO CREMA 
+SALMON MARINADO AL ENELDO CON MOSTAZA
+Corvina Plancha
+TACOS DE SALMON
+Atún en Aceite
+Sardinas en aceite
+Caballa en aceite
+pez espada en adobo y frito
+Filete de Perca
+sarzuela de pescado 
+bacalao con bearnesa
+salmon con verduras
+filete tilapia
+MEJILLONES MARINERA 
+LANGOSTINOS PLANCHA 
+Ceviche de camarones
+MEJILLONES CON AJO
+PULPO A FEIRA
+Mejillones en escabeche
+Caracolas
+almejas salsa verde
+Salpicón de pulpo canario
+Langostinos cocidos
+PINTXO DE HUEVO CON LANGOSTINOS Y ESPARRAGO
+chocos con mojo
+CHAMPIÑONES SOJA Y SESAMO
+CHANA MASALA
+WOK DE VERDURAS 
+PIÑA DE MAIZ AL VAPOR CON MANTEQUILLA
+COLIFLOR GRATINADA
+PIMIENTOS ASADOS 
+ESPARRAGOS CON BACON GUISADOS Y ASADOS
+ARVEJAS ESTILO CANARIO
+PUCHERO VEGETAL
+JUDIAS SALTEADAS CON MANTEQUILLA 
+CALABACIN RODAJAS CON QUESO AZUL 
+BROCOLI SALTEADO CON JAMON 
+ELOTES  CON CHILES PARRILLA 
+PARRILLADA DE VERDURAS
+TOMATES ASADOS CON QUESO 
+ZANAHORIA GUISADA
+CALABACIN CON CAPONATA 
+COLIFLOR AJO ARRRIERO
+BERENJENAS CON MIEL 
+GUISANTES CON JAMON 
+menestra de verduras
+quinoa con vegetales
+tomate gratinado
+zanahoria salteada
+pimientos padron
+alcachofa piquillo
+champiñon plancha
+calabaza plancha
+guisantes salteados tomillo y ajo
+tomates cherrys salteados al ajillo
+calabacin plancha
+Judias Verdes Sote
+verdura salteada
+tomate provenzal
+setas al ajillo
+coles de bruselas
+Cocktail de Envinagrats
+berenjena plancha
+esparragos con salteado de jamón
+pastel de verdura
+brecol con panceta
+tofu salteado con verduras
+champis al ajillo
+fabada vegetariana
+cebolla caramelizada
+pepinillos
+Pimientos tricolor
+encurtidos
+cebolla
+Alcaparras en vinagre
+cebolla crujiente
+Pepino 
+Tomates 
+Tomates cherrys
+Cebolla roja
+Zanahoria rallada
+Apio en Lardones
+Espárragos
+Alfalfa germinada
+Soja germinada
+Jalapeños
+Endivias
+Rábanos
+Canónigos
+Ensalada china
+Coleslaw
+Hojas de espinacas
+Rúcula
+Maíz Dulce 
+BRUSCHETTA DE TOMATE CHERRY Y ALBAHACA
+GAZPACHO
+Berenjenas en vinagre
+Ensalada mixta
+Tabbule 
+Caprese
+Ensalada Waldorf
+Ensalada de quinoa
+Ensalada de pollo y bacon
+Ensalada Griega
+Ensalada de quinoa
+Ensalada César
+Ensalada queso cabra y remolacha
+Ensalada de col
+Ensalada alemana
+Ensaladilla rusa
+Ensalada couscous y vegetales
+Ensalada de Mozzarella perla, Cherry y Rúcula
+Ensalada de atún
+Ensalada César con base de melón
+ENSALADA DE PEPINO Y SESAMO
+ENSALADA DE GARBANZOS EN VINAGRETA 
+Ensalada de berros
+Ensalada Panzanella
+BROCHETA DE QUESO FRESCO Y TOMATE CON MOJO VERDE
+ALCACHOFAS VINAGRETA
+SALMOREJO DE FRESA
+TIRADITO DE TOMATE 
+Pepitas de Girasol
+Banderillas
+Cebollitas en Vinagre 
+Brotes de Lechuga
+ROLLITOS PRIMAVERA
+AROS DE CEBOLLA 
+CHURROS DE PESCADO 
+BOLITAS DE QUESO 
+AROS DE CEBOLLA 
+CALAMARES ROMANA
+CROQUETAS JAMON 
+samosa veg curry
+jalapeño relleno cheddar
+croquetas pollo
+coliflor en tempura
+nugget de pollo
+PAPAS FRITAS 
+PAPAS ARRUGADAS
+BATATA FRITA 
+PAPAS FRITAS 
+PAPAS ASADAS
+PAPAS GAJO SAZONADOR A CAJUN
+BATATA ASADA
+PAPAS FRITAS 
+PAPAS DELFIN
+PURE DE  BATATA
+PAPAS CAJUN
+POLENTA CON CHAMPIÑONES 
+PAPAS BRAVAS
+papa vapor
+Ensalada sueca de papa
+Papas asadas adobada
+ENSALADA DE PAPA ALEMANA
+pure de papa 
+Patata Duquesa
+papas deluxe
+limón
+Dátiles en Rodajas 
+Aceitunas Pansidas 
+Aceitunas Manzanillas
+Aceitunas adobadas
+Aceitunas negras
+Bayas de Goyi
+Higos
+Albaricoques en julianas
+UVAS
+DATILES
+CIRUELAS
+PASAS
+Ensalada de frutas
+lima
+queso blanco plancha
+Mantequilla
+Margarina
+QUESO COMINOS
+QUESO FRESCO 
+QUESO AZUL
+QUESO DE BOLA
+QUESO FRESCO AHUMADO
+QUESO RULO DE CABRA
+QUESO TIERNO
+QUESO FINAS HIERBAS
+QUESO CHEDDAR
+Dados queso feta
+Queso majorero
+Perlas de mozzarella
+QUESO SEMI AHUMADO
+QUESO MANCHEGO
+GORGONZOLA
+QUESO BRIE
+QUESO GOFIO
+QUESO PIMENTON
+BROCHETA DE QUESO FRESCO Y TOMATE CON MOJO VERDE
+QUESO AHUMADO
+fabada vegetariana
+ENSALADA DE GARBANZOS EN VINAGRETA 
+Hummus con Papadum
+NACHOS ,GUACAMOLE Y PICO DE GALLO
+nachos
+GRISSINI
+pan
+sandwich salmón
+sandwich vegetal con huevo
+Mini bocadillo de Atún  y Alcaparras
+Mini Bocadillo de pollo con queso crema
+pan polar relleno de salmon y aguacate
+WRAPS DE SALMON Y AGUACATE
+WRAP DE POLLO Y AGUACATE
+wrapp relleno de vegetales y soja
+wrapp de Jamón York,vegetales  y Huevo
+Mini bocadillo de cordero
+sandwich mixto
+Huevos duros
+Uvas pasas
+Pipas de girasol
+Semillas de sésamo
+Pipas de calabaza
+Nueces 
+Montadito vegetal
+Montadito de pulled chiken
+montadito de caballa
+MONTADITO DE TARTAR DE BERENJENA
+TOSTA DE PATA ASADA CON VERDURAS Y QUESO 
+MONTADITO DE ROASTBEEF CON PIÑA
+TOSTADA DE ALMOGROTE Y CHICHARRON
+TOSTA DE CARNE MECHADA
+TOSTA TAPENADO CON PIQUILLO 
+MONTADITO  DE TORTILLA Y PADRON 
+PAN TUMACA Y JAMÓN
+TOSTADA SKAGEN
+montadito de ibericos
+Montadito de cangrejo y cebollino
+pata asada con pimenton ahumado  y oliva
+Juliana de jamón serrano
+Juliana de salami
+Juliana de Pechuga de pavo
+Juliana de jamón york
+Embutido cortado
+Tabla de jamón
+Crea un menu semanal para un buffet de hotel donde incluyas almuerzo y cena con mínimo 3 platos principales y 3 entrantes.
+                La rueda de alimentos debe ser variada, equilibrada y sostenible, si hay elementos del lunes que se pueden reaprovechar para otro día mejor.
+                Señala las comidas que se pueden reaprovechar de otros días en el menu.
+Response: **Lunes**
+
+*   **Almuerzo:**
+    *   **Entrantes:** Ensalada mixta, Crema de calabaza, Bruschetta de tomate cherry y albahaca
+    *   **Principales:** Paella de carne, Merluza plancha, Tallarines con verduras y soja
+
+*   **Cena:**
+    *   **Entrantes:** Ensalada César, Sopa de cebolla, Tosta de carne mechada
+    *   **Principales:** Pollo al curry, Lasaña de carne, Salmón a la sal
+
+**Martes**
+
+*   **Almuerzo:**
+    *   **Entrantes:** Gazpacho, Crema de guisantes, Ensalada de garbanzos en vinagreta
+    *   **Principales:** Arroz con pollo, Pizza verdura, Albóndigas en salsa
+
+*   **Cena:**
+    *   **Entrantes:** Ensalada Griega, Crema de coliflor, Rollitos primavera
+    *   **Principales:** Carne fiesta, Bacalao encebollado, Espaguetis a la boloñesa
+
+**Miércoles**
+
+*   **Almuerzo:**
+    *   **Entrantes:** Ensalada de quinoa, Crema de tomate, Berenjenas en vinagre
+    *   **Principales:** Fideuá verduras, Pollo salmorejo, Filetes de ternera
+
+*   **Cena:**
+    *   **Entrantes:** Ensalada de queso cabra y remolacha, Sopa minestrone, Montadito de pulled chicken
+    *   **Principales:** Curry de pescado, Chuletas de cerdo, Penne a la carbonara
+
+**Jueves**
+
+*   **Almuerzo:**
+    *   **Entrantes:** Ensalada de col, Crema de berros, Alcachofas vinagreta
+    *   **Principales:** Arroz marisco, Hamburguesa, Lomo de cerdo asado con romero y ajo
+
+*   **Cena:**
+    *   **Entrantes:** Ensaladilla rusa, Gumbo, Montadito de caballa
+    *   **Principales:** Pato a la naranja, Salmón en salsa de eneldo, Macarrones con salsa de tomate y albahaca
+
+**Viernes**
+
+*   **Almuerzo:**
+    *   **Entrantes:** Ensalada alemana, Potaje de lentejas, Tabbule
+    *   **Principales:** Paella de marisco, Escalope de pollo, Tortellinis a la boscaíola
+
+*   **Cena:**
+    *   **Entrantes:** Ensalada couscous y vegetales, Crema de espárragos, Tosta tapenado con piquillo
+    *   **Principales:** Solomillo de cerdo, Corvina plancha, Espirales a la putanesca
+
+**Sábado**
+
+*   **Almuerzo:**
+    *   **Entrantes:** Ensalada de Mozzarella perla, Cherry y Rúcula, Porrusalda, Salmorejo de fresa
+    *   **Principales:** Arroz chaifa con pollo, Pizza BBQ pollo, Secreto de cerdo ibérico
+
+*   **Cena:**
+    *   **Entrantes:** Ensalada de atún, Sopa de pollo china, Tostada de almogrote y chicharrón
+    *   **Principales:** Cordero al chilindrón, Pez espada en adobo y frito, Lasaña de verduras
+
+**Domingo**
+
+*   **Almuerzo:**
+    *   **Entrantes:** Ensalada César con base de melón, Crema de elotes (maíz), Tiradito de tomate
+    *   **Principales:** Jambalaya, Brocheta pollo teriyaki, Filete de perca
+
+*   **Cena:**
+    *   **Entrantes:** Ensalada panzanella, Crema de calabaza (reaprovechada del lunes), Pan tumaca y jamón
+    *   **Principales:** Conejo en salsa, Sarzuela de pescado, Rigatoni a la Norma
+
+**Reaprovechamiento:**
+
+*   **Lunes:** Crema de calabaza (reaprovechar para el domingo)
+*   **Martes:** Pollo al curry (reaprovechar como relleno para wrap)
+*   **Miércoles:** Paella de marisco (reaprovechar como arroz salteado)
+*   **Jueves:** Espaguetis a la boloñesa (reaprovechar para hacer timbales)
+*   **Viernes:** Solomillo de cerdo (reaprovechar para hacer sandwiches)
+*   **Sábado:** Lasaña de verduras (reaprovechar para hacer pastelitos individuales)
+*   **Domingo:** Filete de perca (reaprovechar para hacer croquetas)
+
+
+Tokens Used: 4366
+--------------------------------------------------
+
+Hour: 2025-04-07 14:59:18
+Prompt: A partir de la siguiente rueda de alimentos: PLATANO CON LECHE DE COCO
+SURTIDO BOLLERIA VARIADA
+BERLINA RELLENA Y FRUTOS ROJOS 
+TARTA DE MANDARINA 
+TARTA CAKE  DE MELOCOTON
+TARTA QUESO ARANDANOS 
+BROWNIE CHOCOLATE 
+MOUSSE DE CHOCOLATE Y NATA
+TARTA DE MANZANA
+TARTA DE QUESO NATA 
+NATA MONTADA
+NUBES
+QUESILLO CANARIO
+SUSPIRO URUGUAYO
+DULCES CANARIOS 
+MOUSSE
+CHESSE CAKE LIMON
+TIRAMISU
+CREME BRULLE
+TARTA  DE CHOCOLATE 
+CARROT CAKE 
+PASTEL DE QUESO AL HORNO CON DULCE DE LECHE 
+NATILLAS CON DULCE DE LECHE 
+MOUSSE DE MANGO Y CHOCOLATE
+TARTA DE PAPAYA
+PANACOTTA
+TARTA LIMON REDONDA
+TARTA CAKE DE FRUTOS ROJOS 
+CREMA CATALANA
+ARROZ CON LECHE
+TARTA ALMENDRAS
+BRAZO DE YEMA 
+CHURROS CON CHOCOLATE 
+SOPA DE POLLO CHINA
+GUMBO
+CREMA DE BERROS
+SOPA DE CEBOLLA 
+CREMA DE ELOTES (MAIZ)
+SOPA MINESTRONE
+PORRUSALDA
+crema de guisantes
+crema de coliflor
+crema de esparragos
+crema de tomate
+potaje de lentejas
+crema de calabaza
+TALLARINES CON VERDURA Y SOJA
+PENNE
+TORTELLINIS
+ESPAGUETIS
+Macarrones
+ESPIRALES
+Pasta tricolor
+TALLARINES
+Pasta seca corta
+pasta seca larga
+pasta fresca
+lasaña de carne 
+SALSA BOLOÑESA
+SALSA ARRABIATTA
+SALSA DE TOMATE Y ALBAHACA
+SALSA BOSCAIOLA
+SALSA TOMATE
+SALSA MARISCO
+SALSA CARBONARA
+SALSA DE GUINDILLA Y CHORIZO
+SALSA BBQ
+SALSA ESPAÑOLA
+SALSA DE PIMIENTA
+TERIYAKI CON DEMI GLACE 
+SALSA GRAVY
+SALSA BEARNESA
+SALSA PROVENZAL
+SALSA AMERICANA
+SALSA DE MENTA
+SALSA MEXICANA
+SALSA DE QUESO
+SALSA DE VINO TINTO
+Salsa pesto
+Salsa de Salmón 
+Salsa napolitana
+Salsa champis y tomate
+Salsa bechamel
+pesto rojo
+Salsa Cuatro Quesos
+Salsa Siciliana
+salsa champiñones
+ketchup
+Mojo Rojo 
+Mojo Verde 
+Mahonesa y Ali Oli 
+Salsa Rosa 
+Salsa tumaca
+Salsa bearnesa sueca fria
+Salsa remoulade danesa
+Salsa Tártara
+Salsa César
+Salsa crema agria y huevas
+SALSA TOMATILLO VERDE 
+Chimichurri
+Salsa remoulade
+Salsa vinagreta
+Salsa Mostaza miel y modena
+Mahonesa siracha
+Salsa mostaza miel
+MAHONESA TERIYAKI
+mostaza
+guacamole
+PIZZA CARNE MOLIDA 
+PIZZA BBQ POLLO  
+PIZZA TROPICAL
+PIZZA CHAMPIÑONES 
+PIZZA PICANTE JALAPEÑOS 
+PIZZA PEPERONI
+PIZZA VERDURAS 
+Pizza 4 quesos
+Pizza hawaiana
+Pizza vegetariana
+Pizza margarita
+Pizza  bacon y bbq
+Pizza pollo champis
+Pizza salami
+BIRYANI VERDURAS 
+JAMBALAYA 
+PAELLA DE CARNE
+PAELLA DE MARISCO
+ARROZ CHAIFA CON POLLO
+RISOTO CHAMPIÑONES 
+FIDEUA VERDURAS 
+arroz con pollo
+arroz marisco 
+Cous Cous
+ENSALADA DE ARROZ AL CURRY  CON POLLO Y PIÑA
+Bulgur
+arroz con verduras
+Quinoa roja
+POKE DE ATUN
+paella de sepia
+fideua de pescado
+Arroz al curry
+arroz blanco
+cocuscous con hortalizas
+CERDO AGRIDULCE
+CARNE BBQ
+POLLO SALMOREJO
+POLLO AL CURRY
+FAJITAS DE POLLO
+ESTOFADO CARNE MILANESA
+POLLO AL AJILLO 
+BROCHETA POLLO TERIYAKI
+KEBAB POLLO
+CHULETAS
+ENTRECOTE
+COSTILLAS
+POLLO
+HAMBURGUESA
+SALCHICHA FRESCA
+CONEJO EN SALSA
+CARNE FIESTA
+PATA DE CERDO ASADA
+COSTILLAS CON JENGIBRE Y MIEL 
+MINI HAMBURGUESAS
+PIERNA DE CORDERO 
+CHILE CON CARNE
+QUESADILLAS JAMON Y QUESO
+BIFE 
+POLLO CAZADORA 
+ESCALOPE DE POLLO
+LOMO DE CERDO ASADO CON ROMERO Y AJO
+ALBONDIGAS EN SALSA
+ENTRECOT 
+chuletas de cerdo 
+FILETES DE TERNERA
+pato a la naranja
+solomillo de cerdo 
+ternera salteada con bambú y soja
+filetes de pavo 
+Bacon frito en julianas
+Juliana de pollo asado
+solomillo de cerdo manzana asada al vino tinto
+brocheta de pollo
+secreto de cerdo ibérico
+jamoncitos de pollo fritos al ajillo 
+tabla de pollo relleno
+tabla de roast beef con mostaza
+bao de costillas con rucula,rabanos y bbq
+pollo strogonoff
+solomillo de cerdo
+perrito caliente
+SALMON A LA SAL
+CURRY DE  PESCADO 
+SALMON ESPECIES CAJUN 
+BACALAO ENCEBOLLADO
+SALMON EN SALSA DE ENELDO
+PESCADO A LA VERACRUZANA
+BACALAO LIVORNESA
+MERLUZA PLANCHA
+CABALLA ADOBADA
+FILETE DE PERCA 
+EMPERADOR ADOBADO
+fogonero al ajillo 
+Salpicón de caballa
+ROLLOS DE SALMON AHUMADO CON QUESO CREMA 
+SALMON MARINADO AL ENELDO CON MOSTAZA
+Corvina Plancha
+TACOS DE SALMON
+Atún en Aceite
+Sardinas en aceite
+Caballa en aceite
+pez espada en adobo y frito
+Filete de Perca
+sarzuela de pescado 
+bacalao con bearnesa
+salmon con verduras
+filete tilapia
+MEJILLONES MARINERA 
+LANGOSTINOS PLANCHA 
+Ceviche de camarones
+MEJILLONES CON AJO
+PULPO A FEIRA
+Mejillones en escabeche
+Caracolas
+almejas salsa verde
+Salpicón de pulpo canario
+Langostinos cocidos
+PINTXO DE HUEVO CON LANGOSTINOS Y ESPARRAGO
+chocos con mojo
+CHAMPIÑONES SOJA Y SESAMO
+CHANA MASALA
+WOK DE VERDURAS 
+PIÑA DE MAIZ AL VAPOR CON MANTEQUILLA
+COLIFLOR GRATINADA
+PIMIENTOS ASADOS 
+ESPARRAGOS CON BACON GUISADOS Y ASADOS
+ARVEJAS ESTILO CANARIO
+PUCHERO VEGETAL
+JUDIAS SALTEADAS CON MANTEQUILLA 
+CALABACIN RODAJAS CON QUESO AZUL 
+BROCOLI SALTEADO CON JAMON 
+ELOTES  CON CHILES PARRILLA 
+PARRILLADA DE VERDURAS
+TOMATES ASADOS CON QUESO 
+ZANAHORIA GUISADA
+CALABACIN CON CAPONATA 
+COLIFLOR AJO ARRRIERO
+BERENJENAS CON MIEL 
+GUISANTES CON JAMON 
+menestra de verduras
+quinoa con vegetales
+tomate gratinado
+zanahoria salteada
+pimientos padron
+alcachofa piquillo
+champiñon plancha
+calabaza plancha
+guisantes salteados tomillo y ajo
+tomates cherrys salteados al ajillo
+calabacin plancha
+Judias Verdes Sote
+verdura salteada
+tomate provenzal
+setas al ajillo
+coles de bruselas
+Cocktail de Envinagrats
+berenjena plancha
+esparragos con salteado de jamón
+pastel de verdura
+brecol con panceta
+tofu salteado con verduras
+champis al ajillo
+fabada vegetariana
+cebolla caramelizada
+pepinillos
+Pimientos tricolor
+encurtidos
+cebolla
+Alcaparras en vinagre
+cebolla crujiente
+Pepino 
+Tomates 
+Tomates cherrys
+Cebolla roja
+Zanahoria rallada
+Apio en Lardones
+Espárragos
+Alfalfa germinada
+Soja germinada
+Jalapeños
+Endivias
+Rábanos
+Canónigos
+Ensalada china
+Coleslaw
+Hojas de espinacas
+Rúcula
+Maíz Dulce 
+BRUSCHETTA DE TOMATE CHERRY Y ALBAHACA
+GAZPACHO
+Berenjenas en vinagre
+Ensalada mixta
+Tabbule 
+Caprese
+Ensalada Waldorf
+Ensalada de quinoa
+Ensalada de pollo y bacon
+Ensalada Griega
+Ensalada de quinoa
+Ensalada César
+Ensalada queso cabra y remolacha
+Ensalada de col
+Ensalada alemana
+Ensaladilla rusa
+Ensalada couscous y vegetales
+Ensalada de Mozzarella perla, Cherry y Rúcula
+Ensalada de atún
+Ensalada César con base de melón
+ENSALADA DE PEPINO Y SESAMO
+ENSALADA DE GARBANZOS EN VINAGRETA 
+Ensalada de berros
+Ensalada Panzanella
+BROCHETA DE QUESO FRESCO Y TOMATE CON MOJO VERDE
+ALCACHOFAS VINAGRETA
+SALMOREJO DE FRESA
+TIRADITO DE TOMATE 
+Pepitas de Girasol
+Banderillas
+Cebollitas en Vinagre 
+Brotes de Lechuga
+ROLLITOS PRIMAVERA
+AROS DE CEBOLLA 
+CHURROS DE PESCADO 
+BOLITAS DE QUESO 
+AROS DE CEBOLLA 
+CALAMARES ROMANA
+CROQUETAS JAMON 
+samosa veg curry
+jalapeño relleno cheddar
+croquetas pollo
+coliflor en tempura
+nugget de pollo
+PAPAS FRITAS 
+PAPAS ARRUGADAS
+BATATA FRITA 
+PAPAS FRITAS 
+PAPAS ASADAS
+PAPAS GAJO SAZONADOR A CAJUN
+BATATA ASADA
+PAPAS FRITAS 
+PAPAS DELFIN
+PURE DE  BATATA
+PAPAS CAJUN
+POLENTA CON CHAMPIÑONES 
+PAPAS BRAVAS
+papa vapor
+Ensalada sueca de papa
+Papas asadas adobada
+ENSALADA DE PAPA ALEMANA
+pure de papa 
+Patata Duquesa
+papas deluxe
+limón
+Dátiles en Rodajas 
+Aceitunas Pansidas 
+Aceitunas Manzanillas
+Aceitunas adobadas
+Aceitunas negras
+Bayas de Goyi
+Higos
+Albaricoques en julianas
+UVAS
+DATILES
+CIRUELAS
+PASAS
+Ensalada de frutas
+lima
+queso blanco plancha
+Mantequilla
+Margarina
+QUESO COMINOS
+QUESO FRESCO 
+QUESO AZUL
+QUESO DE BOLA
+QUESO FRESCO AHUMADO
+QUESO RULO DE CABRA
+QUESO TIERNO
+QUESO FINAS HIERBAS
+QUESO CHEDDAR
+Dados queso feta
+Queso majorero
+Perlas de mozzarella
+QUESO SEMI AHUMADO
+QUESO MANCHEGO
+GORGONZOLA
+QUESO BRIE
+QUESO GOFIO
+QUESO PIMENTON
+BROCHETA DE QUESO FRESCO Y TOMATE CON MOJO VERDE
+QUESO AHUMADO
+fabada vegetariana
+ENSALADA DE GARBANZOS EN VINAGRETA 
+Hummus con Papadum
+NACHOS ,GUACAMOLE Y PICO DE GALLO
+nachos
+GRISSINI
+pan
+sandwich salmón
+sandwich vegetal con huevo
+Mini bocadillo de Atún  y Alcaparras
+Mini Bocadillo de pollo con queso crema
+pan polar relleno de salmon y aguacate
+WRAPS DE SALMON Y AGUACATE
+WRAP DE POLLO Y AGUACATE
+wrapp relleno de vegetales y soja
+wrapp de Jamón York,vegetales  y Huevo
+Mini bocadillo de cordero
+sandwich mixto
+Huevos duros
+Uvas pasas
+Pipas de girasol
+Semillas de sésamo
+Pipas de calabaza
+Nueces 
+Montadito vegetal
+Montadito de pulled chiken
+montadito de caballa
+MONTADITO DE TARTAR DE BERENJENA
+TOSTA DE PATA ASADA CON VERDURAS Y QUESO 
+MONTADITO DE ROASTBEEF CON PIÑA
+TOSTADA DE ALMOGROTE Y CHICHARRON
+TOSTA DE CARNE MECHADA
+TOSTA TAPENADO CON PIQUILLO 
+MONTADITO  DE TORTILLA Y PADRON 
+PAN TUMACA Y JAMÓN
+TOSTADA SKAGEN
+montadito de ibericos
+Montadito de cangrejo y cebollino
+pata asada con pimenton ahumado  y oliva
+Juliana de jamón serrano
+Juliana de salami
+Juliana de Pechuga de pavo
+Juliana de jamón york
+Embutido cortado
+Tabla de jamón
+Alimentos con mayor desperdicio: Canre bbq, Cerdo agridulce, salmon en salsa de eneldo.Crea un menu semanal para un buffet de hotel donde incluyas almuerzo y cena con mínimo 3 platos principales y 3 entrantes.
+                La rueda de alimentos debe ser variada, equilibrada y sostenible, si hay elementos del lunes que se pueden reaprovechar para otro día mejor.
+                Señala las comidas que se pueden reaprovechar de otros días en el menu.
+                Tener en cuenta si nombran alimentos que mas se suelen desperdiciar para consejos de reaprovechamiento.
+Response: **MENÚ SEMANAL BUFFET (Almuerzo y Cena)**
+
+**Lunes**
+
+*   **Almuerzo**
+    *   **Entrantes:** Ensalada mixta, Gazpacho, Bruschetta de tomate cherry y albahaca
+    *   **Principales:** Paella de carne, Pollo al curry, Merluza plancha
+*   **Cena**
+    *   **Entrantes:** Crema de calabaza, Ensalada César, Rollitos primavera
+    *   **Principales:** Carne BBQ, Salmón a la sal, Lasaña de carne
+
+**Martes**
+
+*   **Almuerzo**
+    *   **Entrantes:** Ensalada de quinoa, Crema de tomate, Guacamole con nachos
+    *   **Principales:** Cerdo agridulce, Arroz con pollo, Filete de perca
+*   **Cena**
+    *   **Entrantes:** Sopa minestrone, Ensalada griega, Croquetas de jamón
+    *   **Principales:** Cordero asado, Curry de pescado, Pizza vegetariana
+
+**Miércoles**
+
+*   **Almuerzo**
+    *   **Entrantes:** Ensalada Waldorf, Crema de champiñones, Berenjenas en vinagre
+    *   **Principales:** Pollo al ajillo, Salmón en salsa de eneldo, Espaguetis a la boloñesa
+*   **Cena**
+    *   **Entrantes:** Crema de coliflor, Ensalada de garbanzos en vinagreta, Calamares a la romana
+    *   **Principales:** Ternera salteada con bambú y soja, Paella de marisco, Pizza de pepperoni
+
+**Jueves**
+
+*   **Almuerzo**
+    *   **Entrantes:** Tabbule, Crema de guisantes, Pimientos asados
+    *   **Principales:** Estofado de carne milanesa, Bacalao encebollado, Tallarines con verduras y soja
+*   **Cena**
+    *   **Entrantes:** Sopa de cebolla, Ensalada Caprese, Bolitas de queso
+    *   **Principales:** Fajitas de pollo, Pizza hawaiana, Corvina a la plancha
+
+**Viernes**
+
+*   **Almuerzo**
+    *   **Entrantes:** Ensalada de col, Crema de elotes (maíz), Almejas en salsa verde
+    *   **Principales:** Churros de pescado, Risotto de champiñones, Albóndigas en salsa
+*   **Cena**
+    *   **Entrantes:** Sopa de pollo china, Ensalada de atún, Aros de cebolla
+    *   **Principales:** Brocheta de pollo teriyaki, Jambalaya, Pizza de champiñones
+
+**Sábado**
+
+*   **Almuerzo**
+    *   **Entrantes:** Ensalada alemana, Salmorejo de fresa, Champiñones soja y sésamo
+    *   **Principales:** Costillas con jengibre y miel, Merluza a la plancha, Quinoa roja con vegetales
+*   **Cena**
+    *   **Entrantes:** Ensalada Panzanella, Hummus con pan, Coliflor gratinada
+    *   **Principales:** Carne fiesta, Pato a la naranja, Arroz al curry
+
+**Domingo**
+
+*   **Almuerzo**
+    *   **Entrantes:** Ensalada couscous y vegetales, Tiradito de tomate, Arvejas estilo canario
+    *   **Principales:** Conejo en salsa, Curry de pescado, Fideuá de verduras
+*   **Cena**
+    *   **Entrantes:** Ensalada de pepino y sésamo, Pastel de verdura, Jamón serrano
+    *   **Principales:** Chuletas de cerdo, Solomillo de cerdo manzana asada al vino tinto, Sarzuela de pescado
+
+**Reaprovechamiento**
+
+*   **Lunes Cena (Carne BBQ):** Utilizar las sobras en mini hamburguesas o desmenuzada en tacos.
+*   **Martes Almuerzo (Cerdo agridulce):** Incorporar a rollitos de primavera o en ensaladas orientales.
+*   **Miércoles Almuerzo (Salmón en salsa de eneldo):** Desmenuzar y usar en sándwiches o ensaladas de pasta.
+
+
+Tokens Used: 4331
+--------------------------------------------------
+
+Hour: 2025-04-08 11:06:51
+Prompt: A partir de la siguiente rueda de alimentos: PLATANO CON LECHE DE COCO
+SURTIDO BOLLERIA VARIADA
+BERLINA RELLENA Y FRUTOS ROJOS 
+TARTA DE MANDARINA 
+TARTA CAKE  DE MELOCOTON
+TARTA QUESO ARANDANOS 
+BROWNIE CHOCOLATE 
+MOUSSE DE CHOCOLATE Y NATA
+TARTA DE MANZANA
+TARTA DE QUESO NATA 
+NATA MONTADA
+NUBES
+QUESILLO CANARIO
+SUSPIRO URUGUAYO
+DULCES CANARIOS 
+MOUSSE
+CHESSE CAKE LIMON
+TIRAMISU
+CREME BRULLE
+TARTA  DE CHOCOLATE 
+CARROT CAKE 
+PASTEL DE QUESO AL HORNO CON DULCE DE LECHE 
+NATILLAS CON DULCE DE LECHE 
+MOUSSE DE MANGO Y CHOCOLATE
+TARTA DE PAPAYA
+PANACOTTA
+TARTA LIMON REDONDA
+TARTA CAKE DE FRUTOS ROJOS 
+CREMA CATALANA
+ARROZ CON LECHE
+TARTA ALMENDRAS
+BRAZO DE YEMA 
+CHURROS CON CHOCOLATE 
+SOPA DE POLLO CHINA
+GUMBO
+CREMA DE BERROS
+SOPA DE CEBOLLA 
+CREMA DE ELOTES (MAIZ)
+SOPA MINESTRONE
+PORRUSALDA
+crema de guisantes
+crema de coliflor
+crema de esparragos
+crema de tomate
+potaje de lentejas
+crema de calabaza
+TALLARINES CON VERDURA Y SOJA
+PENNE
+TORTELLINIS
+ESPAGUETIS
+Macarrones
+ESPIRALES
+Pasta tricolor
+TALLARINES
+Pasta seca corta
+pasta seca larga
+pasta fresca
+lasaña de carne 
+SALSA BOLOÑESA
+SALSA ARRABIATTA
+SALSA DE TOMATE Y ALBAHACA
+SALSA BOSCAIOLA
+SALSA TOMATE
+SALSA MARISCO
+SALSA CARBONARA
+SALSA DE GUINDILLA Y CHORIZO
+SALSA BBQ
+SALSA ESPAÑOLA
+SALSA DE PIMIENTA
+TERIYAKI CON DEMI GLACE 
+SALSA GRAVY
+SALSA BEARNESA
+SALSA PROVENZAL
+SALSA AMERICANA
+SALSA DE MENTA
+SALSA MEXICANA
+SALSA DE QUESO
+SALSA DE VINO TINTO
+Salsa pesto
+Salsa de Salmón 
+Salsa napolitana
+Salsa champis y tomate
+Salsa bechamel
+pesto rojo
+Salsa Cuatro Quesos
+Salsa Siciliana
+salsa champiñones
+ketchup
+Mojo Rojo 
+Mojo Verde 
+Mahonesa y Ali Oli 
+Salsa Rosa 
+Salsa tumaca
+Salsa bearnesa sueca fria
+Salsa remoulade danesa
+Salsa Tártara
+Salsa César
+Salsa crema agria y huevas
+SALSA TOMATILLO VERDE 
+Chimichurri
+Salsa remoulade
+Salsa vinagreta
+Salsa Mostaza miel y modena
+Mahonesa siracha
+Salsa mostaza miel
+MAHONESA TERIYAKI
+mostaza
+guacamole
+PIZZA CARNE MOLIDA 
+PIZZA BBQ POLLO  
+PIZZA TROPICAL
+PIZZA CHAMPIÑONES 
+PIZZA PICANTE JALAPEÑOS 
+PIZZA PEPERONI
+PIZZA VERDURAS 
+Pizza 4 quesos
+Pizza hawaiana
+Pizza vegetariana
+Pizza margarita
+Pizza  bacon y bbq
+Pizza pollo champis
+Pizza salami
+BIRYANI VERDURAS 
+JAMBALAYA 
+PAELLA DE CARNE
+PAELLA DE MARISCO
+ARROZ CHAIFA CON POLLO
+RISOTO CHAMPIÑONES 
+FIDEUA VERDURAS 
+arroz con pollo
+arroz marisco 
+Cous Cous
+ENSALADA DE ARROZ AL CURRY  CON POLLO Y PIÑA
+Bulgur
+arroz con verduras
+Quinoa roja
+POKE DE ATUN
+paella de sepia
+fideua de pescado
+Arroz al curry
+arroz blanco
+cocuscous con hortalizas
+CERDO AGRIDULCE
+CARNE BBQ
+POLLO SALMOREJO
+POLLO AL CURRY
+FAJITAS DE POLLO
+ESTOFADO CARNE MILANESA
+POLLO AL AJILLO 
+BROCHETA POLLO TERIYAKI
+KEBAB POLLO
+CHULETAS
+ENTRECOTE
+COSTILLAS
+POLLO
+HAMBURGUESA
+SALCHICHA FRESCA
+CONEJO EN SALSA
+CARNE FIESTA
+PATA DE CERDO ASADA
+COSTILLAS CON JENGIBRE Y MIEL 
+MINI HAMBURGUESAS
+PIERNA DE CORDERO 
+CHILE CON CARNE
+QUESADILLAS JAMON Y QUESO
+BIFE 
+POLLO CAZADORA 
+ESCALOPE DE POLLO
+LOMO DE CERDO ASADO CON ROMERO Y AJO
+ALBONDIGAS EN SALSA
+ENTRECOT 
+chuletas de cerdo 
+FILETES DE TERNERA
+pato a la naranja
+solomillo de cerdo 
+ternera salteada con bambú y soja
+filetes de pavo 
+Bacon frito en julianas
+Juliana de pollo asado
+solomillo de cerdo manzana asada al vino tinto
+brocheta de pollo
+secreto de cerdo ibérico
+jamoncitos de pollo fritos al ajillo 
+tabla de pollo relleno
+tabla de roast beef con mostaza
+bao de costillas con rucula,rabanos y bbq
+pollo strogonoff
+solomillo de cerdo
+perrito caliente
+SALMON A LA SAL
+CURRY DE  PESCADO 
+SALMON ESPECIES CAJUN 
+BACALAO ENCEBOLLADO
+SALMON EN SALSA DE ENELDO
+PESCADO A LA VERACRUZANA
+BACALAO LIVORNESA
+MERLUZA PLANCHA
+CABALLA ADOBADA
+FILETE DE PERCA 
+EMPERADOR ADOBADO
+fogonero al ajillo 
+Salpicón de caballa
+ROLLOS DE SALMON AHUMADO CON QUESO CREMA 
+SALMON MARINADO AL ENELDO CON MOSTAZA
+Corvina Plancha
+TACOS DE SALMON
+Atún en Aceite
+Sardinas en aceite
+Caballa en aceite
+pez espada en adobo y frito
+Filete de Perca
+sarzuela de pescado 
+bacalao con bearnesa
+salmon con verduras
+filete tilapia
+MEJILLONES MARINERA 
+LANGOSTINOS PLANCHA 
+Ceviche de camarones
+MEJILLONES CON AJO
+PULPO A FEIRA
+Mejillones en escabeche
+Caracolas
+almejas salsa verde
+Salpicón de pulpo canario
+Langostinos cocidos
+PINTXO DE HUEVO CON LANGOSTINOS Y ESPARRAGO
+chocos con mojo
+CHAMPIÑONES SOJA Y SESAMO
+CHANA MASALA
+WOK DE VERDURAS 
+PIÑA DE MAIZ AL VAPOR CON MANTEQUILLA
+COLIFLOR GRATINADA
+PIMIENTOS ASADOS 
+ESPARRAGOS CON BACON GUISADOS Y ASADOS
+ARVEJAS ESTILO CANARIO
+PUCHERO VEGETAL
+JUDIAS SALTEADAS CON MANTEQUILLA 
+CALABACIN RODAJAS CON QUESO AZUL 
+BROCOLI SALTEADO CON JAMON 
+ELOTES  CON CHILES PARRILLA 
+PARRILLADA DE VERDURAS
+TOMATES ASADOS CON QUESO 
+ZANAHORIA GUISADA
+CALABACIN CON CAPONATA 
+COLIFLOR AJO ARRRIERO
+BERENJENAS CON MIEL 
+GUISANTES CON JAMON 
+menestra de verduras
+quinoa con vegetales
+tomate gratinado
+zanahoria salteada
+pimientos padron
+alcachofa piquillo
+champiñon plancha
+calabaza plancha
+guisantes salteados tomillo y ajo
+tomates cherrys salteados al ajillo
+calabacin plancha
+Judias Verdes Sote
+verdura salteada
+tomate provenzal
+setas al ajillo
+coles de bruselas
+Cocktail de Envinagrats
+berenjena plancha
+esparragos con salteado de jamón
+pastel de verdura
+brecol con panceta
+tofu salteado con verduras
+champis al ajillo
+fabada vegetariana
+cebolla caramelizada
+pepinillos
+Pimientos tricolor
+encurtidos
+cebolla
+Alcaparras en vinagre
+cebolla crujiente
+Pepino 
+Tomates 
+Tomates cherrys
+Cebolla roja
+Zanahoria rallada
+Apio en Lardones
+Espárragos
+Alfalfa germinada
+Soja germinada
+Jalapeños
+Endivias
+Rábanos
+Canónigos
+Ensalada china
+Coleslaw
+Hojas de espinacas
+Rúcula
+Maíz Dulce 
+BRUSCHETTA DE TOMATE CHERRY Y ALBAHACA
+GAZPACHO
+Berenjenas en vinagre
+Ensalada mixta
+Tabbule 
+Caprese
+Ensalada Waldorf
+Ensalada de quinoa
+Ensalada de pollo y bacon
+Ensalada Griega
+Ensalada de quinoa
+Ensalada César
+Ensalada queso cabra y remolacha
+Ensalada de col
+Ensalada alemana
+Ensaladilla rusa
+Ensalada couscous y vegetales
+Ensalada de Mozzarella perla, Cherry y Rúcula
+Ensalada de atún
+Ensalada César con base de melón
+ENSALADA DE PEPINO Y SESAMO
+ENSALADA DE GARBANZOS EN VINAGRETA 
+Ensalada de berros
+Ensalada Panzanella
+BROCHETA DE QUESO FRESCO Y TOMATE CON MOJO VERDE
+ALCACHOFAS VINAGRETA
+SALMOREJO DE FRESA
+TIRADITO DE TOMATE 
+Pepitas de Girasol
+Banderillas
+Cebollitas en Vinagre 
+Brotes de Lechuga
+ROLLITOS PRIMAVERA
+AROS DE CEBOLLA 
+CHURROS DE PESCADO 
+BOLITAS DE QUESO 
+AROS DE CEBOLLA 
+CALAMARES ROMANA
+CROQUETAS JAMON 
+samosa veg curry
+jalapeño relleno cheddar
+croquetas pollo
+coliflor en tempura
+nugget de pollo
+PAPAS FRITAS 
+PAPAS ARRUGADAS
+BATATA FRITA 
+PAPAS FRITAS 
+PAPAS ASADAS
+PAPAS GAJO SAZONADOR A CAJUN
+BATATA ASADA
+PAPAS FRITAS 
+PAPAS DELFIN
+PURE DE  BATATA
+PAPAS CAJUN
+POLENTA CON CHAMPIÑONES 
+PAPAS BRAVAS
+papa vapor
+Ensalada sueca de papa
+Papas asadas adobada
+ENSALADA DE PAPA ALEMANA
+pure de papa 
+Patata Duquesa
+papas deluxe
+limón
+Dátiles en Rodajas 
+Aceitunas Pansidas 
+Aceitunas Manzanillas
+Aceitunas adobadas
+Aceitunas negras
+Bayas de Goyi
+Higos
+Albaricoques en julianas
+UVAS
+DATILES
+CIRUELAS
+PASAS
+Ensalada de frutas
+lima
+queso blanco plancha
+Mantequilla
+Margarina
+QUESO COMINOS
+QUESO FRESCO 
+QUESO AZUL
+QUESO DE BOLA
+QUESO FRESCO AHUMADO
+QUESO RULO DE CABRA
+QUESO TIERNO
+QUESO FINAS HIERBAS
+QUESO CHEDDAR
+Dados queso feta
+Queso majorero
+Perlas de mozzarella
+QUESO SEMI AHUMADO
+QUESO MANCHEGO
+GORGONZOLA
+QUESO BRIE
+QUESO GOFIO
+QUESO PIMENTON
+BROCHETA DE QUESO FRESCO Y TOMATE CON MOJO VERDE
+QUESO AHUMADO
+fabada vegetariana
+ENSALADA DE GARBANZOS EN VINAGRETA 
+Hummus con Papadum
+NACHOS ,GUACAMOLE Y PICO DE GALLO
+nachos
+GRISSINI
+pan
+sandwich salmón
+sandwich vegetal con huevo
+Mini bocadillo de Atún  y Alcaparras
+Mini Bocadillo de pollo con queso crema
+pan polar relleno de salmon y aguacate
+WRAPS DE SALMON Y AGUACATE
+WRAP DE POLLO Y AGUACATE
+wrapp relleno de vegetales y soja
+wrapp de Jamón York,vegetales  y Huevo
+Mini bocadillo de cordero
+sandwich mixto
+Huevos duros
+Uvas pasas
+Pipas de girasol
+Semillas de sésamo
+Pipas de calabaza
+Nueces 
+Montadito vegetal
+Montadito de pulled chiken
+montadito de caballa
+MONTADITO DE TARTAR DE BERENJENA
+TOSTA DE PATA ASADA CON VERDURAS Y QUESO 
+MONTADITO DE ROASTBEEF CON PIÑA
+TOSTADA DE ALMOGROTE Y CHICHARRON
+TOSTA DE CARNE MECHADA
+TOSTA TAPENADO CON PIQUILLO 
+MONTADITO  DE TORTILLA Y PADRON 
+PAN TUMACA Y JAMÓN
+TOSTADA SKAGEN
+montadito de ibericos
+Montadito de cangrejo y cebollino
+pata asada con pimenton ahumado  y oliva
+Juliana de jamón serrano
+Juliana de salami
+Juliana de Pechuga de pavo
+Juliana de jamón york
+Embutido cortado
+Tabla de jamón
+Los alimentos que mas se desperdician son:
+Sardinas en aceite
+Caballa en aceite
+pez espada en adobo y fritoCrea un menu semanal para un buffet de hotel donde incluyas almuerzo y cena con mínimo 3 platos principales y 3 entrantes.
+                La rueda de alimentos debe ser variada, equilibrada y sostenible, si hay elementos del lunes que se pueden reaprovechar para otro día mejor.
+                Señala las comidas que se pueden reaprovechar de otros días en el menu.
+                Tener en cuenta si nombran alimentos que mas se suelen desperdiciar para consejos de reaprovechamiento.
+Response: **Menú Semanal Buffet Hotel**
+
+**Lunes**
+
+*   **Almuerzo**
+    *   Entrantes: Ensalada mixta, Crema de calabaza, Tabbule
+    *   Principales: Pollo al curry, Espaguetis con salsa boloñesa, Arroz con verduras
+
+*   **Cena**
+    *   Entrantes: Sopa de cebolla, Ensalada César, Berenjenas con miel
+    *   Principales: Salmón a la sal, Carne BBQ, Lasaña de carne
+
+**Martes**
+
+*   **Almuerzo**
+    *   Entrantes: Gazpacho, Ensalada Waldorf, Crema de coliflor
+    *   Principales: Tallarines con verdura y soja, Hamburguesa, Paella de carne
+
+*   **Cena**
+    *   Entrantes: Mejillones marinera, Ensalada de quinoa, Crema de espárragos
+    *   Principales: Pescado a la veracruzana, Cerdo agridulce, Pizza barbacoa pollo
+    *   Reaprovechar: Carne BBQ (Lunes) en pizza.
+
+**Miércoles**
+
+*   **Almuerzo**
+    *   Entrantes: Cocktail de Envinagrats, Salmorejo de fresa, Crema de tomate
+    *   Principales: Pollo salmorejo, Macarrones con salsa de tomate y albahaca, Arroz con pollo
+
+*   **Cena**
+    *   Entrantes: Ensalada Griega, Pulpo a feira, Champiñones soja y sésamo
+    *   Principales: Bacalao encebollado, Costillas, Biryani verduras
+    *   Reaprovechar: Pollo Salmorejo (Miércoles) en ensalada fría.
+
+**Jueves**
+
+*   **Almuerzo**
+    *   Entrantes: Ensalada de garbanzos en vinagreta, Crema de guisantes, Pinchos de langostinos y espárragos
+    *   Principales: Estofado carne milanesa, Pizza pepperoni, Arroz al curry
+
+*   **Cena**
+    *   Entrantes: Ensalada caprese, Setas al ajillo, Parrillada de verduras
+    *   Principales: Salmon con verduras, Chuletas, Jambalaya
+    *   Reaprovechar: Estofado carne milanesa (jueves) en relleno de empanadas
+
+**Viernes**
+
+*   **Almuerzo**
+    *   Entrantes: Berenjenas en vinagre, Hummus con papadum, Crema de calabaza
+    *   Principales: Fajitas de pollo, Penne con salsa arrabbiata, Arroz blanco
+
+*   **Cena**
+    *   Entrantes: Almejas salsa verde, Ensalada de col, Tosta de patata asada con verduras y queso
+    *   Principales: Curry de pescado, Brocheta pollo teriyaki, Pizza verduras
+    *   Reaprovechar: pollo teriyaki (viernes) en ensalada
+
+**Sábado**
+
+*   **Almuerzo**
+    *   Entrantes: Ensalada china, Vichyssoise, Escalivada
+    *   Principales: Lomo de cerdo asado con romero y ajo, Espirales con pesto, Paella de marisco
+
+*   **Cena**
+    *   Entrantes: Salpicón de pulpo canario, Ensalada alemana, Tomates provenzal
+    *   Principales: Merluza plancha, Conejo en salsa, Chili con carne
+    *   Reaprovechar: Chili con carne (Sabado) en tacos
+
+**Domingo**
+
+*   **Almuerzo**
+    *   Entrantes: Ensalada de Mozzarella perla, Cherry y Rúcula, Fabada vegetariana, Escalivada
+    *   Principales: Pollo cazadora, Tortellini con salsa carbonara, Arroz chaifa con pollo
+
+*   **Cena**
+    *   Entrantes: Ensalada Panzanella, Coles de Bruselas, Pastel de verduras
+    *   Principales: Solomillo de cerdo, Fideuá verduras, Pizza 4 quesos
+    *   Reaprovechar: Pollo cazadora (domingo) en croquetas
+
+**Recomendaciones Desperdicio**
+
+*   **Sardinas/Caballa/Pez Espada:**
+    *   Elaborar patés o rellenos para empanadas.
+    *   Usar en ensaladas o revueltos.
+
+
+Tokens Used: 4369
+--------------------------------------------------

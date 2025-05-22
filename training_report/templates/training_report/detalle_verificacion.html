@@ -1,0 +1,81 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Detalle de Verificación{% endblock %}
+{% block content %}
+{% include 'training_report/includes/training_report_menu.html'%}
+<div class="container mt-5">
+    <a href="{% url 'historial_verificaciones' %}" class="btn btn-secondary mb-4">← Volver al Historial</a>
+    <h1>Detalle de Verificación #{{ verificacion.id }}</h1>
+
+    <div class="card mt-4">
+        <div class="card-header">
+            <strong>Fecha de Verificación:</strong> {{ verificacion.fecha_verificacion|date:"d M Y H:i" }}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Titular/Fragmento Consultado:</h5>
+            <p class="card-text">{{ verificacion.titular_input }}</p>
+
+            {% if verificacion.url_input %}
+                <h5 class="card-title mt-3">URL de la Noticia:</h5>
+                <p class="card-text"><a href="{{ verificacion.url_input }}" target="_blank">{{ verificacion.url_input }}</a></p>
+            {% endif %}
+
+            {% if verificacion.texto_completo_input %}
+                <h5 class="card-title mt-3">Texto Completo Proporcionado:</h5>
+                <pre class="card-text pre-scrollable">{{ verificacion.texto_completo_input }}</pre>
+            {% endif %}
+
+            {# Si implementas la subida de imagen, puedes mostrarla aquí #}
+            {# {% if verificacion.imagen_input %} #}
+            {#     <h5 class="card-title mt-3">Imagen de la Noticia:</h5> #}
+            {#     <img src="{{ verificacion.imagen_input.url }}" class="img-fluid mt-2" alt="Imagen de la Noticia"> #}
+            {# {% endif %} #}
+
+            <hr>
+
+            <h5 class="card-title">Nivel de Fiabilidad:</h5>
+            <p class="card-text">{{ verificacion.nivel_fiabilidad|default:"No se pudo determinar" }}</p>
+
+            {% if verificacion.resumen_evaluacion %}
+                <h5 class="card-title mt-3">Resumen de la Evaluación:</h5>
+                <p class="card-text">{{ verificacion.resumen_evaluacion }}</p>
+            {% endif %}
+
+            {% if verificacion.fuentes_soporte %}
+                <h5 class="card-title mt-3">Fuentes de Soporte:</h5>
+                <ul>
+                    {% for fuente in verificacion.fuentes_soporte %}
+                        <li>{{ fuente }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            {% if verificacion.posibles_sesgos %}
+                <h5 class="card-title mt-3">Posibles Sesgos o Técnicas de Desinformación Identificadas:</h5>
+                <p class="card-text">{{ verificacion.posibles_sesgos }}</p>
+            {% endif %}
+
+            {% if verificacion.advertencias %}
+                <div class="alert alert-warning mt-3" role="alert">
+                    <strong>Advertencias:</strong> {{ verificacion.advertencias }}
+                </div>
+            {% endif %}
+
+            <h5 class="card-title mt-3">Respuesta Bruta de Gemini (para depuración):</h5>
+            <pre class="card-text pre-scrollable">{{ verificacion.respuesta_gemini_completa }}</pre>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<style>
+    .pre-scrollable {
+        max-height: 300px; /* Limita la altura del texto preformateado */
+        overflow-y: auto;  /* Habilita el scroll si el contenido es muy largo */
+        background-color: #f8f9fa; /* Color de fondo ligero */
+        padding: 10px;
+        border: 1px solid #e9ecef;
+        border-radius: 5px;
+    }
+</style>

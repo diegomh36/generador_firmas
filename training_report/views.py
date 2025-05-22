@@ -1,12 +1,12 @@
-import base64
+import base64, re
 from io import BytesIO
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import TrainingReport, Content, Signature
-from .forms import TrainingReportForm, ImagenForm
+from .forms import TrainingReportForm, ImagenForm, VerificationForm, ImageVerificationForm
 from reportlab.pdfgen import canvas
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.contrib.admin.views.decorators import staff_member_required
 from django.utils.decorators import method_decorator
 import os, io
@@ -734,7 +734,242 @@ def generar_pdf(request):
     
 genai.configure(api_key=api_key) """
 
-genai.configure(api_key=os.environ.get('GOOGLE_API_KEY')) 
+
+genai.configure(api_key='AIzaSyCIzIx3jw-ikoLOcZXEzZreIZ134J34BGs')
+model_vision = genai.GenerativeModel('gemini-2.0-flash')
+
+def verificar_noticia(request):
+    resultado = None
+    if request.method == 'POST':
+        form = VerificationForm(request.POST)
+        if form.is_valid():
+            titular = form.cleaned_data['titular']
+            url = form.cleaned_data['url']
+            texto_completo = form.cleaned_data['texto_completo']
+
+            prompt = f"""Evalúa la fiabilidad de la siguiente información de manera aproximada proporcionada por el usuario. Considera los siguientes aspectos en tu análisis:
+
+                    1.  Veracidad de las afirmaciones: ¿Son las afirmaciones fácticas precisas y están respaldadas por evidencia? Busca información en fuentes confiables para verificar los hechos mencionados.
+                    2.  Credibilidad de la fuente (si se proporciona): Si se proporciona la URL o el nombre del medio, evalúa la reputación y el historial de la fuente en cuanto a precisión y posibles sesgos.
+                    3.  Presencia de sesgos o intenciones: ¿Hay indicios de algún sesgo particular (político, ideológico, económico) o intento de manipulación en la forma en que se presenta la información?
+                    4.  Calidad de la evidencia y el razonamiento: ¿Se presentan pruebas sólidas para respaldar las afirmaciones? ¿El razonamiento es lógico y coherente?
+                    5.  Posible presencia de técnicas de desinformación: ¿Identificas el uso de alguna técnica común de desinformación (por ejemplo, apelación a la emoción, hombre de paja, falsa dicotomía, generalizaciones sin fundamento)?
+
+                    Información proporcionada por el usuario:
+
+                    * Titular/Fragmento: {titular}
+                    * URL/Medio (Opcional): {url}
+                    * Texto Completo (Opcional): {texto_completo}
+
+                    Responde de la siguiente manera:
+
+                    * Nivel de Fiabilidad: (Ejemplo: Alta, Moderada, Baja, No se puede determinar)
+                    * Resumen de la Evaluación: Proporciona un breve resumen de tu análisis, destacando los puntos clave que respaldan tu evaluación del nivel de fiabilidad.
+                    * Fuentes de Soporte (si las encuentras): Si encuentras fuentes confiables que verifiquen o desmientan la información, inclúyelas con un breve comentario sobre su relevancia.
+                    * Posibles Sesgos o Técnicas de Desinformación Identificadas: Si identificas algún sesgo o técnica de desinformación, menciónalo y explica brevemente por qué lo consideras así.
+                    * Advertencias o Consideraciones Adicionales: Incluye cualquier otra advertencia o consideración importante sobre la información analizada.
+
+                    Consideraciones Adicionales para URLs:
+
+                    * Si la URL proporcionada requiere una suscripción o pago para acceder al contenido completo, indica que el análisis se basará principalmente en el titular, la información pública disponible sobre el sitio y cualquier fragmento de texto proporcionado por el usuario o encontrado en otras fuentes.
+                    * Prioriza el análisis del texto completo proporcionado por el usuario si está disponible, incluso si también se proporciona una URL de pago.
+                    * Busca si la misma noticia o información está siendo reportada por otras fuentes de acceso público para complementar el análisis.
+                    """
+
+            try:
+                # Get API key with fallbacks (environment var, direct configuration, or settings)
+                api_key = os.environ.get('GOOGLE_API_KEY')
+                
+                if not api_key and hasattr(settings, 'GOOGLE_API_KEY'):
+                    api_key = settings.GOOGLE_API_KEY
+                
+                # If no key found in environment or settings, use fallback key
+                if not api_key:
+                    api_key = 'YOUR_BACKUP_API_KEY'  # Replace with a valid API key
+                    print("Warning: Using fallback API key")
+                
+                # Configure Gemini with the API key
+                genai.configure(api_key=api_key)
+                model = genai.GenerativeModel('gemini-2.0-flash')
+                response = model.generate_content(prompt)
+                respuesta_gemini = response.text
+                
+                # Parse the response into structured data
+                nivel_fiabilidad = "No se pudo determinar"
+                resumen_evaluacion = ""
+                fuentes_soporte = []
+                posibles_sesgos = ""
+                advertencias = ""
+                
+                # Extract Nivel de Fiabilidad
+                if "Nivel de Fiabilidad:" in respuesta_gemini:
+                    nivel_parte = respuesta_gemini.split("Nivel de Fiabilidad:")[1].split("\n")[0].strip()
+                    if nivel_parte:
+                        nivel_fiabilidad = nivel_parte
+                
+                # Extract Resumen de la Evaluación
+                if "Resumen de la Evaluación:" in respuesta_gemini:
+                    partes = respuesta_gemini.split("Resumen de la Evaluación:")[1].split("\n")
+                    for parte in partes:
+                        if parte.strip() and not parte.strip().startswith("* ") and not parte.strip().startswith("Fuentes de Soporte:"):
+                            resumen_evaluacion += parte.strip() + " "
+                        if "Fuentes de Soporte:" in parte:
+                            break
+                
+                # Extract Fuentes de Soporte
+                if "Fuentes de Soporte:" in respuesta_gemini:
+                    fuentes_parte = respuesta_gemini.split("Fuentes de Soporte:")[1]
+                    if "Posibles Sesgos" in fuentes_parte:
+                        fuentes_parte = fuentes_parte.split("Posibles Sesgos")[0]
+                    
+                    lineas = fuentes_parte.strip().split("\n")
+                    for linea in lineas:
+                        if linea.strip() and ":" not in linea and (linea.strip().startswith("-") or linea.strip().startswith("*")):
+                            fuentes_soporte.append(linea.strip()[1:].strip())
+                
+                # Extract Posibles Sesgos
+                if "Posibles Sesgos" in respuesta_gemini:
+                    sesgos_parte = respuesta_gemini.split("Posibles Sesgos")[1]
+                    if ":" in sesgos_parte:
+                        sesgos_parte = sesgos_parte.split(":")[1]
+                    if "Advertencias" in sesgos_parte:
+                        sesgos_parte = sesgos_parte.split("Advertencias")[0]
+                    posibles_sesgos = sesgos_parte.strip()
+                
+                # Extract Advertencias
+                if "Advertencias" in respuesta_gemini:
+                    advertencias_parte = respuesta_gemini.split("Advertencias")[1]
+                    if ":" in advertencias_parte:
+                        advertencias_parte = advertencias_parte.split(":")[1]
+                    advertencias = advertencias_parte.strip()
+                
+                resultado = {
+                    'nivel_fiabilidad': nivel_fiabilidad,
+                    'resumen_evaluacion': resumen_evaluacion.strip(),
+                    'fuentes_soporte': fuentes_soporte,
+                    'posibles_sesgos': posibles_sesgos,
+                    'advertencias': advertencias
+                }
+                
+            except Exception as e:
+                import traceback
+                error_traceback = traceback.format_exc()
+                print(f"Error detallado al comunicarse con la API de Gemini: {e}")
+                print(error_traceback)
+                
+                resultado = {
+                    'error': f"Ocurrió un error al comunicarse con la API de Gemini: {e}",
+                    'nivel_fiabilidad': "Error en la API",
+                    'resumen_evaluacion': f"Error detallado: {str(e)}",
+                    'advertencias': "Revisa la consola del servidor para más información."
+                }
+    else:
+        form = VerificationForm()
+
+    return render(request, 'training_report/analizar_imagen.html', {'form': form, 'resultado': resultado})
+
+def parse_gemini_response(gemini_text_response):
+    """
+    Parsea la respuesta de texto de Gemini (esperando JSON)
+    y devuelve un diccionario estructurado.
+    """
+    # Expresión regular para encontrar un bloque JSON, incluso si está dentro de ```json ... ```
+    json_match = re.search(r'```json\s*(\{.*\})\s*```', gemini_text_response, re.DOTALL)
+    if json_match:
+        json_string = json_match.group(1)
+    else:
+        # Si no está en un bloque de código, intentamos buscar el primer y último corchete
+        # Esto es menos robusto pero puede funcionar si el JSON está "suelto"
+        try:
+            start_brace = gemini_text_response.find('{')
+            end_brace = gemini_text_response.rfind('}')
+            if start_brace != -1 and end_brace != -1 and end_brace > start_brace:
+                json_string = gemini_text_response[start_brace : end_brace + 1]
+            else:
+                json_string = gemini_text_response # Intentar con el texto completo si no se encuentra un bloque claro
+        except Exception:
+            json_string = gemini_text_response # Fallback
+
+    try:
+        parsed_data = json.loads(json_string)
+
+        resultado = {
+            'nivel_fiabilidad': parsed_data.get('nivel_fiabilidad', 'No se pudo determinar'),
+            'resumen_evaluacion': parsed_data.get('resumen_evaluacion', 'No se pudo extraer el resumen.'),
+            'fuentes_soporte': parsed_data.get('fuentes_soporte', []),
+            'posibles_sesgos': parsed_data.get('posibles_sesgos', 'No se identificaron sesgos.'),
+            'advertencias': parsed_data.get('advertencias', 'Ninguna.'),
+            'respuesta_completa': gemini_text_response # Siempre guardar la respuesta cruda para depuración
+        }
+    except json.JSONDecodeError as e:
+        # Si el parsing JSON falla incluso después de intentar limpiar
+        resultado = {
+            'nivel_fiabilidad': 'Error de Formato',
+            'resumen_evaluacion': f'La IA no generó un JSON válido. Error: {e}. Respuesta cruda: {gemini_text_response}',
+            'fuentes_soporte': [],
+            'posibles_sesgos': '',
+            'advertencias': '',
+            'respuesta_completa': gemini_text_response
+        }
+    except Exception as e:
+        # Otros errores inesperados durante el procesamiento
+        resultado = {
+            'nivel_fiabilidad': 'Error de Procesamiento',
+            'resumen_evaluacion': f'Ocurrió un error inesperado al procesar la respuesta de la IA: {e}',
+            'fuentes_soporte': [],
+            'posibles_sesgos': '',
+            'advertencias': '',
+            'respuesta_completa': gemini_text_response
+        }
+    return resultado
+
+def verificar_noticia_imagen(request):
+    """Vista para la verificación de noticias solo con imagen (obligatoria)."""
+    resultado = None
+    if request.method == 'POST':
+        form = ImageVerificationForm(request.POST, request.FILES)
+        if form.is_valid():
+            imagen = form.cleaned_data['imagen'] # La imagen es ahora obligatoria
+
+            # Prompt específico para la imagen
+            # Le pedimos que analice la imagen como la fuente principal de información
+            image_prompt_text = f"""Evalúa la fiabilidad de la información presente en la imagen proporcionada. Asume que la imagen contiene el contenido principal de la noticia. Responde exclusivamente en formato JSON, con las siguientes claves:
+
+            "nivel_fiabilidad": (string, ej. "Alta", "Moderada", "Baja", "No se puede determinar")
+            "resumen_evaluacion": (string, un breve resumen de tu análisis basado en la imagen)
+            "fuentes_soporte": (array de strings, enlaces o descripciones de fuentes confiables que verifican/desmienten la información visible en la imagen, máximo 3-5)
+            "posibles_sesgos": (string, si identificas algún sesgo o técnica de desinformación basada en la imagen, explica brevemente)
+            "advertencias": (string, cualquier otra advertencia o consideración adicional sobre la imagen o su contenido)
+
+            Considera los siguientes aspectos en tu análisis:
+            - Contenido de la imagen: ¿Qué información visual y textual se presenta?
+            - Veracidad de las afirmaciones visibles: ¿Son las afirmaciones fácticas precisas y están respaldadas por evidencia externa que puedas encontrar?
+            - Credibilidad de la fuente visible (logos, URLs en la imagen): Si es legible.
+            - Manipulación de imagen: ¿Hay indicios de que la imagen ha sido alterada o está fuera de contexto?
+            - Relevancia y contexto: ¿Es la imagen relevante para el tema que parece abordar?
+
+            Asegúrate de que la respuesta sea un JSON válido.
+            """
+
+            parts = [
+                image_prompt_text,
+                {'mime_type': imagen.content_type, 'data': imagen.read()}
+            ]
+
+            try:
+                response = model_vision.generate_content(parts)
+                gemini_text_response = response.text
+                resultado = parse_gemini_response(gemini_text_response)
+
+            except Exception as e:
+                resultado = {'error': f"Ocurrió un error al comunicarse con la IA (imagen): {e}. Por favor, intente de nuevo más tarde."}
+    else:
+        form = ImageVerificationForm()
+
+    return render(request, 'training_report/verificador_con_imagen.html', {'form': form, 'resultado': resultado})
+
+
+
 
 def analizar_imagenes_comida(request, mensaje_prompt=None):
     resultado = None
@@ -785,6 +1020,9 @@ def analizar_imagenes_comida(request, mensaje_prompt=None):
                 try:
                     response = model.generate_content(imagenes_data_to_send)
                     resultado = response.text
+                    resultado = resultado.replace("```", " ")  # Eliminar bloques de código markdown
+                    resultado = resultado.replace("json", " ")  # Eliminar la palabra 'json' si está presente
+                    print("Tipo de variable: " + str(type(resultado)))
                     if hasattr(response, 'usage_metadata'):
                         token_info = {
                             'prompt_tokens': response.usage_metadata.prompt_token_count,
@@ -802,21 +1040,68 @@ def analizar_imagenes_comida(request, mensaje_prompt=None):
                     }
                     export_to_txt(data, "analisis_proporcion_comida.txt", mode=1)
 
+                    try:
+                        json_response = json.loads(resultado)
+                        
+                        print(f"Successfully analyzed and saved AI info for images")
+                        return json_response
+                        
+                    except json.JSONDecodeError as e:
+                        print(f"Error parsing JSON response: {e}")
+                        print(f"Raw response: {resultado}")
+                        return None
+
                 except Exception as e:
                     resultado = f"Error al llamar a la API de Gemini: {e}"
                     print(f"Error en Gemini API: {e}")
                     token_info = None
             else:
                 resultado = "Error: No se pudieron preparar los datos de las imágenes."
-    return render(request, 'training_report/analizar_imagen.html', {
+    return render(request, 'training_report/crear_rueda_alimentos.html', {
         'form': form,
         'resultado': resultado,
         'token_info': token_info
     })
 
+from django.http import JsonResponse
+
 def analizar_imagenes_personalizado(request):
-    mensaje_prompt = "De las siguientes imagenes de comida dame una receta para reaprovechar las sobras"
-    return analizar_imagenes_comida(request, mensaje_prompt=mensaje_prompt)
+    mensaje_prompt = """Analiza estas imágenes de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {
+            "imagenes": [
+                {
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        },
+                        {
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }
+            ]
+        }
+        """
+    
+    result = analizar_imagenes_comida(request, mensaje_prompt=mensaje_prompt)
+    
+    # Check if result is a dict or list (JSON data)
+    if isinstance(result, (dict, list)):
+        return JsonResponse(result, safe=False)
+    else:
+        # If it's not JSON data, it's likely already an HttpResponse from render()
+        # In this case, just return it as is
+        return result if result else render(request, 'training_report/crear_rueda_alimentos.html', {
+            'form': ImagenForm(),
+            'resultado': None,
+            'token_info': None
+        })
 
 def crear_rueda_alimentos(request):
     resultado = None
@@ -828,9 +1113,10 @@ def crear_rueda_alimentos(request):
         if consulta_texto:
             try:
                 prompt = "A partir de la siguiente rueda de alimentos: " + consulta_texto + \
-                """Crea un menu semanal para un buffet de hotel donde incluyas almuerzo y cena con mínimo 2 platos principales.
-                Idealmente la rueda de alimentos debe ser variada, equilibrada y sostenible, si hay elementos del lunes que se pueden reaprovechar para otro día mejor.
-                Señala las comidas que se pueden reaprovechar de otros días en el menu."""
+                """Crea un menu semanal para un buffet de hotel donde incluyas almuerzo y cena con mínimo 3 platos principales y 3 entrantes.
+                La rueda de alimentos debe ser variada, equilibrada y sostenible, si hay elementos del lunes que se pueden reaprovechar para otro día mejor.
+                Señala las comidas que se pueden reaprovechar de otros días en el menu.
+                Tener en cuenta si nombran alimentos que mas se suelen desperdiciar para consejos de reaprovechamiento."""
                 
                 # Llamada a la API 
                 model = genai.GenerativeModel('gemini-2.0-flash', 

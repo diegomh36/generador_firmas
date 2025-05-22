@@ -1,7 +1,7 @@
 {% if request.user.is_staff %}
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(218, 236, 213)">
   <div class="container">
-    <span class="navbar-brand" href="#"><i>Administrar</i></span>
+    <span class="navbar-brand" href="#"><i>Funciones</i></span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nep" aria-controls="nep" aria-expanded="false">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,16 +14,10 @@
           <a class="nav-link" href="{% url 'training_report:training_report' %}"><i>Listar documentos</i></a>
         </li> {% endcomment %}
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'training_report:analizar_comida' %}"><i>Analizar comida</i></a>
+          <a class="nav-link" href="{% url 'training_report:verificar_noticia' %}"><i>Verificar por titular</i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'training_report:analizar_imagenes_personalizado' %}"><i>Receta reaprovechamiento</i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'training_report:analizar_imagenes_proporcion' %}"><i>Calcular proporcion de desperdicio</i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'training_report:crear_rueda_alimentos' %}"><i>Crear rueda de alimentos</i></a>
+          <a class="nav-link" href="{% url 'training_report:verificar_noticia_imagen' %}"><i>Verificar por imagen</i></a>
         </li>
       </ul>
     </div>

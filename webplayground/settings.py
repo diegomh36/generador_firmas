@@ -141,10 +141,12 @@ DEFAULT_FROM_EMAIL = 'diegodmh22@gmail.com'  #Correo al que mandaremos la copia 
 
 
 # Auth redirects
-LOGIN_REDIRECT_URL = 'training_report:training_report'
+LOGIN_REDIRECT_URL = 'training_report:verificar_noticia'
 LOGOUT_REDIRECT_URL = 'home'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY', 'AIzaSyCIzIx3jw-ikoLOcZXEzZreIZ134J34BGs')

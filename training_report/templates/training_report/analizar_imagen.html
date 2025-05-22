@@ -1,24 +1,57 @@
 {% extends 'core/base.html' %}
 {% load crispy_forms_tags %}
 {% load static %}
-<link href="{% static 'training_report/css/previsualizacion.css' %}" rel="stylesheet">
-{% block title %}Crear documento{% endblock %}
+{# No necesitamos el CSS específico de previsualización de imágenes #}
+{% block title %}Verificar Noticia{% endblock %}
 {% block content %}
 {% include 'training_report/includes/training_report_menu.html'%}
 <div class="container mt-5">
-    <h1>Analizar Imagen de Comida</h1>
-    
-    <form method="post" enctype="multipart/form-data">
+    <h1>Verificar la Fiabilidad de una Noticia</h1>
+    <p class="mt-3">Ingrese el titular o un fragmento de la noticia que desea verificar. Opcionalmente, puede proporcionar la URL de la fuente o el texto completo para obtener un análisis más preciso.</p>
+
+    <form method="post">
         {% csrf_token %}
-        <input type="file" name="imagen" multiple>
         <div class="form-group">
-            <button type="submit">Analizar</button>
+            {{ form.titular|as_crispy_field }}
+            <small class="form-text text-muted">Este campo es obligatorio.</small>
+        </div>
+        <div class="form-group">
+            {{ form.url|as_crispy_field }}
+            <small class="form-text text-muted">Opcional: Proporcionar la URL de la noticia puede mejorar la precisión.</small>
+        </div>
+        <div class="form-group">
+            {{ form.texto_completo|as_crispy_field }}
+            <small class="form-text text-muted">Opcional: Pegar el texto completo de la noticia permite un análisis más detallado, especialmente útil para noticias de pago.</small>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Verificar Noticia</button>
         </div>
     </form>
 
     {% if resultado %}
-        <h2>Resultado:</h2>
-        <p>{{ resultado }}</p>
+        <h2 class="mt-4">Resultado de la Verificación:</h2>
+        <div>
+            <p><strong>Nivel de Fiabilidad:</strong> {{ resultado.nivel_fiabilidad|default:"No se pudo determinar" }}</p>
+            {% if resultado.resumen_evaluacion %}
+                <p><strong>Resumen de la Evaluación:</strong> {{ resultado.resumen_evaluacion }}</p>
+            {% endif %}
+            {% if resultado.fuentes_soporte %}
+                <h3 class="mt-3">Fuentes de Soporte:</h3>
+                <ul>
+                    {% for fuente in resultado.fuentes_soporte %}
+                        <li>{{ fuente }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% if resultado.posibles_sesgos %}
+                <p><strong>Posibles Sesgos o Técnicas de Desinformación Identificadas:</strong> {{ resultado.posibles_sesgos }}</p>
+            {% endif %}
+            {% if resultado.advertencias %}
+                <div class="alert alert-warning mt-3" role="alert">
+                    <strong>Advertencias:</strong> {{ resultado.advertencias }}
+                </div>
+            {% endif %}
+        </div>
     {% endif %}
 </div>
 {% endblock %}

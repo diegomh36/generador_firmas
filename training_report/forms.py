@@ -56,3 +56,41 @@ class TrainingReportForm(forms.ModelForm):
 
 class ImagenForm(forms.Form):
     imagen = forms.ImageField()
+
+class VerificationForm(forms.Form):
+    titular = forms.CharField(
+        label='Titular o Fragmento de la Noticia',
+        widget=forms.Textarea(attrs={'rows': 3}),
+        required=True,
+        help_text='Ingrese el titular o un fragmento del texto que desea verificar.'
+    )
+    url = forms.URLField(
+        label='URL de la Noticia (Opcional)',
+        required=False,
+        help_text='Proporcionar la URL puede mejorar la precisión del análisis.'
+    )
+    texto_completo = forms.CharField(
+        label='Texto Completo de la Noticia (Opcional)',
+        widget=forms.Textarea(attrs={'rows': 10}),
+        required=False,
+        help_text='Pegar el texto completo permite un análisis más detallado, especialmente útil para noticias de pago.'
+    )
+
+# verificador_noticias/forms.py
+
+# ... (otros formularios) ...
+
+class ImageVerificationForm(forms.Form):
+    imagen = forms.ImageField(
+        label='Subir Imagen de la Noticia',
+        required=True, # ¡Ahora es obligatorio!
+        help_text='Sube una captura de pantalla del titular o de la noticia. Solo PNG, JPEG, WEBP.'
+    )
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.layout = Layout(
+            'imagen',
+            Submit('submit', 'Analizar Imagen de Noticia', css_class='btn btn-primary mt-3')
+        )

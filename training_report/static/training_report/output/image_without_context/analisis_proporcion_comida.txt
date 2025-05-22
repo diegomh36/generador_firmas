@@ -25,3 +25,1162 @@ Response: - Categoría: Carne
 - Recomendaciones para recalentar y aprovechar las sobras: Horno, freidora de aire. Croquetas, ensaladilla.
 Tokens Used: 406
 --------------------------------------------------
+
+Hour: 2025-04-07 10:39:22
+Prompt: De las siguientes imagenes de comida dame una receta para reaprovechar las sobras Solo responde con la información solicitada, nada más.
+Response: **Croquetas de pollo:** Desmenuza el pollo, mezcla con bechamel, huevo y pan rallado. Forma croquetas y fríe.
+Tokens Used: 315
+--------------------------------------------------
+
+Hour: 2025-04-07 14:53:23
+Prompt: De las siguientes imagenes de comida dame varias recetas (mínimo 2 y máximo 10) para reaprovechar las sobras Solo responde con la información solicitada, nada más.
+Response: 1.  **Croquetas:** Mezcla las sobras con puré de patata, forma croquetas, rebózalas y fríelas.
+2.  **Relleno para empanadas o samosas:** Utiliza las sobras como relleno, añadiendo verduras picadas y especias.
+3.  **Sopa o crema:** Tritura las sobras con caldo de verduras para crear una sopa o crema.
+4.  **Tortilla:** Incorpora las sobras picadas a una tortilla de patata.
+5.  **Pastel de carne:** Combina las sobras con puré de patata para hacer un pastel de carne.
+Tokens Used: 431
+--------------------------------------------------
+
+Hour: 2025-04-07 14:53:53
+Prompt: De las siguientes imagenes de comida dame varias recetas (mínimo 2 ) para reaprovechar las sobras Solo responde con la información solicitada, nada más.
+Response: 1.  **Croquetas de carne:** Tritura la carne sobrante, mézclala con puré de patata o bechamel, forma croquetas, reboza y fríe.
+2.  **Empanadas rellenas:** Utiliza la carne guisada como relleno para empanadas. Puedes agregarle huevo duro picado o aceitunas.
+Tokens Used: 363
+--------------------------------------------------
+
+Hour: 2025-04-08 10:58:06
+Prompt: 
+                Imagenes de comida sobrante da una respuesta de la siguiente forma para cada imagen:
+                - Categoría (Carne, Pescado, carne o pescado en salsa, marisco)
+                - Subcategoría
+                - Información adicional del plato
+                - Posibles ingredientes
+                - Recomendaciones para recalentar y aprovechar las sobras
+                Solo responde con la información solicitada, nada más.
+                
+Response: - Categoría: Carne
+- Subcategoría: Pollo
+- Información adicional del plato: Parece ser pollo frito o al horno con especias.
+- Posibles ingredientes: Pollo, especias (pimentón, ajo en polvo, cebolla en polvo, pimienta negra), sal.
+- Recomendaciones para recalentar y aprovechar las sobras: Recalentar en el horno o en una freidora de aire para mantener la textura crujiente. Se puede usar en sándwiches, ensaladas o como topping para arroz.
+Tokens Used: 452
+--------------------------------------------------
+
+Hour: 2025-04-08 11:01:42
+Prompt: De las siguientes imagenes de comida dame varias recetas (mínimo 2 y máximo 10) para reaprovechar las sobras Solo responde con la información solicitada, nada más.
+Response: 1.  **Relleno para empanadas o samosas:** Tritura la carne, mézclala con verduras picadas y especias. Rellena masa de empanadas o samosas y hornea o fríe.
+2.  **Croquetas:** Mezcla la carne desmenuzada con puré de patatas, forma croquetas, reboza y fríe.
+3.  **Sopa:** Añade la carne a un caldo de verduras o pollo, junto con fideos o arroz y verduras frescas.
+4.  **Tacos o burritos:** Desmenuza la carne y úsala como relleno para tacos o burritos con tus ingredientes favoritos.
+5.  **Pastel de carne:** Mezcla la carne con verduras picadas y cubre con puré de patatas, hornea hasta dorar.
+6.  **Arroz frito:** Saltea arroz cocido con la carne picada, huevo batido y verduras.
+Tokens Used: 490
+--------------------------------------------------
+
+Hour: 2025-04-08 11:02:16
+Prompt: De las siguientes imagenes de comida dame varias recetas (mínimo 2 y máximo 10) para reaprovechar las sobras Solo responde con la información solicitada, nada más.
+Response: 1. **Croquetas de marisco:** Pica finamente el marisco, mézclalo con bechamel espesa, deja enfriar, forma las croquetas, reboza y fríe.
+2. **Arroz con marisco:** Incorpora el marisco a un arroz caldoso o a la paella.
+3. **Empanada de marisco:** Utiliza el marisco como relleno para empanadas.
+4. **Sopa de marisco:** Añade el marisco a un caldo de pescado o marisco para enriquecerlo.
+5. **Pastel de pescado y marisco:** Mezcla el marisco con puré de patata y hornea para hacer un pastel.
+Tokens Used: 700
+--------------------------------------------------
+
+Hour: 2025-04-08 11:02:51
+Prompt: De las siguientes imagenes de comida dame varias recetas (mínimo 2 y máximo 10) para reaprovechar las sobras Solo responde con la información solicitada, nada más.
+Response: 1.  **Croquetas de pollo:** Desmenuza el pollo, mézclalo con puré de papas, huevo y pan rallado. Forma croquetas y fríelas.
+2.  **Ensalada de pollo:** Desmenuza el pollo y mézclalo con mayonesa, apio, cebolla y uvas pasas. Sirve sobre lechuga o en sándwiches.
+3.  **Tacos de pollo:** Desmenuza el pollo y utilízalo como relleno para tacos con tus ingredientes favoritos.
+4.  **Sopa de pollo:** Utiliza los huesos y restos de pollo para hacer un caldo. Agrega verduras y fideos para una sopa reconfortante.
+5.  **Pastel de pollo:** Desmenuza el pollo y mézclalo con verduras y salsa bechamel. Cubre con masa de hojaldre y hornea.
+6.  **Arroz con pollo:** Desmenuza el pollo y mézclalo con arroz cocido, verduras y especias.
+7.  **Quesadillas de pollo:** Desmenuza el pollo y utilízalo como relleno para quesadillas con queso y otros ingredientes.
+Tokens Used: 794
+--------------------------------------------------
+
+Hour: 2025-04-08 11:03:53
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion y peso de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 2 kg incluyendo todos los alimentos que se encuentran en la imagen. Solo responde con la información solicitada, nada más.
+Response: *   **Tipo de comida:** Pollo frito
+*   **Proporción:** 100%
+*   **Peso aproximado:** 2 kg
+Tokens Used: 357
+--------------------------------------------------
+
+Hour: 2025-04-08 11:04:18
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion y peso de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 4 kg incluyendo todos los alimentos que se encuentran en la imagen. Solo responde con la información solicitada, nada más.
+Response: *   **Papas:** 40%, 1.6 kg
+*   **Zanahorias:** 20%, 0.8 kg
+*   **Frijoles verdes:** 15%, 0.6 kg
+*   **Proteína (pollo/carne):** 15%, 0.6 kg
+*   **Otros vegetales (pimientos, cebolla):** 10%, 0.4 kg
+Tokens Used: 419
+--------------------------------------------------
+
+Hour: 2025-04-08 11:29:31
+Prompt: 
+                Imagenes de comida sobrante da una respuesta de la siguiente forma para cada imagen:
+                - Categoría (Carne, Pescado, carne o pescado en salsa, marisco)
+                - Subcategoría
+                - Información adicional del plato
+                - Posibles ingredientes
+                - Recomendaciones para recalentar y aprovechar las sobras
+                Solo responde con la información solicitada, nada más.
+                
+Response: - Categoría: Pescado o marisco en salsa
+- Subcategoría: Zarzuela de mariscos
+- Información adicional del plato: Guiso marinero con diversos mariscos y pescado en una salsa a base de tomate y caldo de pescado.
+- Posibles ingredientes: Calamares, mejillones, gambas, pescado blanco (merluza, rape), tomate, cebolla, pimiento, ajo, vino blanco, caldo de pescado.
+- Recomendaciones para recalentar y aprovechar las sobras: Calentar suavemente en una olla a fuego bajo para evitar que se sequen los mariscos. Se puede añadir un poco de caldo de pescado o vino blanco si es necesario. Aprovechar las sobras para hacer croquetas, empanadas o rellenar pimientos.
+Tokens Used: 500
+--------------------------------------------------
+
+Hour: 2025-04-08 11:30:21
+Prompt: De las siguientes imagenes de comida dame varias recetas (mínimo 2 y máximo 10) para reaprovechar las sobras Solo responde con la información solicitada, nada más.
+Response: 1.  Croquetas de pollo.
+2.  Sopa de pollo desmenuzado.
+3.  Tacos de pollo deshebrado.
+4.  Ensalada de pollo.
+5.  Empanadas de pollo.
+6.  Pastel de pollo.
+
+Tokens Used: 355
+--------------------------------------------------
+
+Hour: 2025-04-08 11:36:43
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion y peso de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 6 kg incluyendo todos los alimentos que se encuentran en la imagen. Solo responde con la información solicitada, nada más.
+Response: *   **Guiso con trozos:** 6 kg.
+Tokens Used: 338
+--------------------------------------------------
+
+Hour: 2025-04-08 11:36:57
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion y peso de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 5 kg incluyendo todos los alimentos que se encuentran en la imagen. Solo responde con la información solicitada, nada más.
+Response: *   **Proporción:**
+    *   Patatas: 40%
+    *   Zanahorias: 20%
+    *   Judías verdes: 10%
+    *   Pimientos rojos: 10%
+    *   Otros vegetales (cebolla, etc.): 20%
+
+*   **Peso aproximado:**
+    *   Patatas: 2 kg
+    *   Zanahorias: 1 kg
+    *   Judías verdes: 0.5 kg
+    *   Pimientos rojos: 0.5 kg
+    *   Otros vegetales: 1 kg
+Tokens Used: 460
+--------------------------------------------------
+
+Hour: 2025-04-08 11:38:16
+Prompt: De las siguientes imagenes de sobras de comida 
+    ¿cual es la proporcion y peso de cada tipo de comida y de ingredientes que mas tiro? De manera aproximada. El peso total de la comida es 5 kg incluyendo todos los alimentos que se encuentran en la imagen. Solo responde con la información solicitada, nada más.
+Response: *   **Tipo de comida:** Guiso de pescado y mariscos.
+*   **Proporción aproximada:**
+    *   Pescado: 40% (2 kg)
+    *   Mariscos (mejillones, calamares): 30% (1.5 kg)
+    *   Verduras (pimientos, otros): 15% (0.75 kg)
+    *   Salsa: 15% (0.75 kg)
+Tokens Used: 429
+--------------------------------------------------
+
+Hour: 2025-04-10 12:41:16
+Prompt: Analiza estas imágenes de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {{
+            "imagenes": [
+                {{
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {{
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        }},
+                        {{
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }}
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }}
+            ]
+        }}
+        Responde ÚNICAMENTE con el JSON, sin texto adicional antes o después.
+
+         Solo responde con la información solicitada, nada más.
+Response: ```json
+{
+    "imagenes": [
+        {
+            "categoria": "Carne",
+            "subcategoria": "Pollo Frito",
+            "descripcion": "Restos de pollo frito en salsa.",
+            "ingredientes": [
+                {
+                    "nombre": "Pollo",
+                    "proporcion": "0.5"
+                },
+                {
+                    "nombre": "Salsa",
+                    "proporcion": "0.1"
+                }
+            ],
+            "recomendaciones": "Recalentar al horno o en freidora de aire para recuperar la textura crujiente. Usar en tacos o ensaladas."
+        }
+    ]
+}
+```
+Tokens Used: 870
+--------------------------------------------------
+
+Hour: 2025-04-10 12:42:59
+Prompt: Analiza estas imágenes de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {{
+            "imagenes": [
+                {{
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {{
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        }},
+                        {{
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }}
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }}
+            ]
+        }}
+        Responde ÚNICAMENTE con el JSON, sin texto adicional antes o después.
+        No añadas comillas fuera del formato del json.
+         Solo responde con la información solicitada, nada más.
+Response: ```json
+{
+    "imagenes": [
+        {
+            "categoria": "Verdura",
+            "subcategoria": "Guiso de calabaza",
+            "descripcion": "Guiso espeso con trozos de calabaza en salsa.",
+            "ingredientes": [
+                {
+                    "nombre": "Calabaza",
+                    "proporcion": "0.5"
+                },
+                {
+                    "nombre": "Cebolla",
+                    "proporcion": "0.1"
+                },
+                {
+                    "nombre": "Tomate",
+                    "proporcion": "0.1"
+                },
+                {
+                    "nombre": "Especias",
+                    "proporcion": "0.01"
+                }
+            ],
+            "recomendaciones": "Utilizar como relleno para empanadas o croquetas. También se puede triturar y usar como base para una crema o sopa."
+        }
+    ]
+}
+```
+Tokens Used: 683
+--------------------------------------------------
+
+Hour: 2025-04-10 12:44:27
+Prompt: Analiza estas imágenes de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {{
+            "imagenes": [
+                {{
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {{
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        }},
+                        {{
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }}
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }}
+            ]
+        }}
+        Responde ÚNICAMENTE con el JSON, escribe la respuesta a partir de la primera { y que cierre con la ultima }.
+        No añadas comillas simples ni dobles fuera del json.
+         Solo responde con la información solicitada, nada más.
+Response: ```json
+{
+    "imagenes": [
+        {
+            "categoria": "Verdura",
+            "subcategoria": "Guiso de calabaza",
+            "descripcion": "Calabaza guisada en salsa.",
+            "ingredientes": [
+                {
+                    "nombre": "Calabaza",
+                    "proporcion": "0.5"
+                },
+                {
+                    "nombre": "Salsa (tomate, cebolla, ajo)",
+                    "proporcion": "0.1"
+                }
+            ],
+            "recomendaciones": "Triturar para hacer una crema, usar como relleno de empanadas o croquetas."
+        }
+    ]
+}
+```
+Tokens Used: 633
+--------------------------------------------------
+
+Hour: 2025-04-10 13:04:59
+Prompt: Analiza estas imágenes (Hazlo con todas las imagenes) de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {{
+            "imagenes": [
+                {{
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {{
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        }},
+                        {{
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }}
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }}
+            ]
+        }}
+        Responde ÚNICAMENTE con el JSON, escribe la respuesta a partir de la primera { y que cierre con la ultima }.
+        No añadas comillas simples ni dobles fuera del json.
+         Solo responde con la información solicitada, nada más.
+Response: ```json
+{
+    "imagenes": [
+        {
+            "categoria": "Carne",
+            "subcategoria": "Pollo",
+            "descripcion": "Alitas de pollo cocinadas en salsa",
+            "ingredientes": [
+                {
+                    "nombre": "Alitas de pollo",
+                    "proporcion": "0.4"
+                },
+                {
+                    "nombre": "Salsa",
+                    "proporcion": "0.1"
+                }
+            ],
+            "recomendaciones": "Se pueden usar para hacer tacos o desmenuzar en ensaladas"
+        }
+    ]
+}
+```
+Tokens Used: 890
+--------------------------------------------------
+
+Hour: 2025-04-10 13:05:11
+Prompt: 
+                Imagenes de comida sobrante da una respuesta de la siguiente forma para cada imagen:
+                - Categoría (Carne, Pescado, carne o pescado en salsa, marisco)
+                - Subcategoría
+                - Información adicional del plato
+                - Posibles ingredientes
+                - Recomendaciones para recalentar y aprovechar las sobras
+                Solo responde con la información solicitada, nada más.
+                
+Response: Imagen 1:
+
+- Categoría: Carne
+- Subcategoría: Pollo
+- Información adicional del plato: Parece pollo frito o asado con especias.
+- Posibles ingredientes: Pollo, especias (pimentón, ajo en polvo, cebolla en polvo, pimienta), aceite.
+- Recomendaciones para recalentar y aprovechar las sobras: Recalentar en el horno o freidora de aire para mantener la textura crujiente. Usar las sobras para hacer tacos, wraps o ensaladas de pollo.
+
+Imagen 2:
+
+- Categoría: Carne o pescado en salsa
+- Subcategoría: Guiso/Estofado
+- Información adicional del plato: Parece un guiso o estofado con trozos de carne o pescado en una salsa espesa.
+- Posibles ingredientes: Carne o pescado, verduras (zanahoria, patata, cebolla), tomate, caldo, hierbas y especias.
+- Recomendaciones para recalentar y aprovechar las sobras: Recalentar en una olla a fuego lento o en el microondas. Incorporar las sobras a una tortilla, croquetas o empanadas.
+Tokens Used: 833
+--------------------------------------------------
+
+Hour: 2025-04-10 13:05:12
+Prompt: 
+                Imagenes de comida sobrante da una respuesta de la siguiente forma para cada imagen:
+                - Categoría (Carne, Pescado, carne o pescado en salsa, marisco)
+                - Subcategoría
+                - Información adicional del plato
+                - Posibles ingredientes
+                - Recomendaciones para recalentar y aprovechar las sobras
+                Solo responde con la información solicitada, nada más.
+                
+Response: Imagen 1:
+- Categoría: Carne
+- Subcategoría: Pollo
+- Información adicional del plato: Alitas de pollo fritas o asadas con especias.
+- Posibles ingredientes: Alitas de pollo, especias (pimentón, ajo en polvo, cebolla en polvo, pimienta, sal).
+- Recomendaciones para recalentar y aprovechar las sobras: Recalentar en horno o freidora de aire para mantener la textura crujiente. Utilizar las sobras en wraps, ensaladas o tacos.
+
+Imagen 2:
+- Categoría: Carne en salsa
+- Subcategoría: Estofado
+- Información adicional del plato: Estofado de carne con verduras en salsa espesa.
+- Posibles ingredientes: Carne (cerdo, ternera), zanahorias, patatas, cebolla, tomate, caldo de carne, hierbas y especias.
+- Recomendaciones para recalentar y aprovechar las sobras: Recalentar a fuego lento en una olla o en el microondas. Utilizar las sobras en rellenos para empanadas, canelones o como salsa para pasta.
+Tokens Used: 831
+--------------------------------------------------
+
+Hour: 2025-04-10 13:09:42
+Prompt: Analiza estas imágenes (Hazlo con todas las imagenes) de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {{
+            "imagenes": [
+                {{
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {{
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        }},
+                        {{
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }}
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }}
+            ]
+        }}
+        Responde ÚNICAMENTE con el JSON, escribe la respuesta a partir de la primera { y que cierre con la ultima }.
+        No añadas comillas simples ni dobles fuera del json.
+         Solo responde con la información solicitada, nada más.
+Response: ```json
+{
+    "imagenes": [
+        {
+            "categoria": "Carne",
+            "subcategoria": "Pollo",
+            "descripcion": "Alitas de pollo fritas o asadas",
+            "ingredientes": [
+                {
+                    "nombre": "Alitas de pollo",
+                    "proporcion": "0.5"
+                }
+            ],
+            "recomendaciones": "Se pueden recalentar al horno o freír, también se pueden usar para hacer tacos o desmenuzar en ensaladas."
+        }
+    ]
+}
+```
+Tokens Used: 618
+--------------------------------------------------
+
+Hour: 2025-04-10 13:10:05
+Prompt: Analiza estas imágenes (Hazlo con todas las imagenes) de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {{
+            "imagenes": [
+                {{
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {{
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        }},
+                        {{
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }}
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }}
+            ]
+        }}
+        Responde ÚNICAMENTE con el JSON, escribe la respuesta a partir de la primera { y que cierre con la ultima }.
+        No añadas comillas simples ni dobles fuera del json.
+         Solo responde con la información solicitada, nada más.
+Response: ```json
+{
+    "imagenes": [
+        {
+            "categoria": "Carne",
+            "subcategoria": "Pollo",
+            "descripcion": "Alitas de pollo adobadas",
+            "ingredientes": [
+                {
+                    "nombre": "Alitas de pollo",
+                    "proporcion": "0.5"
+                },
+                {
+                    "nombre": "Adobo",
+                    "proporcion": "0.05"
+                }
+            ],
+            "recomendaciones": "Se pueden usar para hacer tacos, añadir a una sopa o recalentar al horno."
+        },
+        {
+            "categoria": "Carne",
+            "subcategoria": "Guiso",
+            "descripcion": "Guiso de carne con verduras",
+            "ingredientes": [
+                {
+                    "nombre": "Carne",
+                    "proporcion": "0.3"
+                },
+                {
+                    "nombre": "Verduras",
+                    "proporcion": "0.2"
+                },
+                {
+                    "nombre": "Salsa",
+                    "proporcion": "0.1"
+                }
+            ],
+            "recomendaciones": "Se puede usar como relleno para empanadas, croquetas o para acompañar arroz."
+        }
+    ]
+}
+```
+Tokens Used: 1040
+--------------------------------------------------
+
+Hour: 2025-04-10 13:24:28
+Prompt: Analiza estas imágenes (Hazlo con todas las imagenes) de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {{
+            "imagenes": [
+                {{
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {{
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        }},
+                        {{
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }}
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }}
+            ]
+        }}
+        Responde ÚNICAMENTE con el JSON, escribe la respuesta a partir de la primera { y que cierre con la ultima }.
+        No añadas comillas simples ni dobles fuera del json.
+         Solo responde con la información solicitada, nada más.
+Response: ```json
+{
+    "imagenes": [
+        {
+            "categoria": "Pescado",
+            "subcategoria": "Atún cocido",
+            "descripcion": "Sobras de atún cocido desmenuzado.",
+            "ingredientes": [
+                {
+                    "nombre": "Atún",
+                    "proporcion": "0.1"
+                }
+            ],
+            "recomendaciones": "Se puede usar para hacer croquetas, ensaladilla rusa, o como relleno de empanadas o sándwiches."
+        }
+    ]
+}
+```
+Tokens Used: 618
+--------------------------------------------------
+
+Hour: 2025-04-11 09:51:57
+Prompt: Analiza estas imágenes de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {{
+            "imagenes": [
+                {{
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {{
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        }},
+                        {{
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }}
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }}
+            ]
+        }}
+        Responde ÚNICAMENTE con el JSON, escribe la respuesta a partir de la primera { y que cierre con la ultima }.
+        No añadas comillas simples ni dobles fuera del json.
+         Solo responde con la información solicitada, nada más.
+Response: ```json
+{
+    "imagenes": [
+        {
+            "categoria": "Verdura",
+            "subcategoria": "Guiso de verduras",
+            "descripcion": "Guiso con trozos de calabaza y posible patata en salsa.",
+            "ingredientes": [
+                {
+                    "nombre": "Calabaza",
+                    "proporcion": "0.4"
+                },
+                {
+                    "nombre": "Patata",
+                    "proporcion": "0.1"
+                },
+                {
+                    "nombre": "Salsa (tomate, cebolla, especias)",
+                    "proporcion": "0.2"
+                }
+            ],
+            "recomendaciones": "Triturar para hacer una crema, usar como relleno para empanadas, mezclar con arroz."
+        }
+    ]
+}
+```
+Tokens Used: 664
+--------------------------------------------------
+
+Hour: 2025-04-11 10:06:11
+Prompt: Analiza estas imágenes de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {{
+            "imagenes": [
+                {{
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {{
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        }},
+                        {{
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }}
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }}
+            ]
+        }}
+        Responde ÚNICAMENTE con el JSON, escribe la respuesta a partir de la primera { y que cierre con la ultima }.
+        No añadas comillas simples ni dobles fuera del json.
+         Solo responde con la información solicitada, nada más.
+Response: ```json
+{
+    "imagenes": [
+        {
+            "categoria": "Verdura",
+            "subcategoria": "Guiso de calabaza",
+            "descripcion": "Restos de un guiso de calabaza con salsa.",
+            "ingredientes": [
+                {
+                    "nombre": "Calabaza",
+                    "proporcion": "0.4"
+                },
+                {
+                    "nombre": "Cebolla",
+                    "proporcion": "0.05"
+                },
+                {
+                    "nombre": "Tomate",
+                    "proporcion": "0.05"
+                },
+                {
+                    "nombre": "Especias",
+                    "proporcion": "0.01"
+                }
+            ],
+            "recomendaciones": "Puede servir como acompañamiento de carnes o para rellenar empanadas."
+        }
+    ]
+}
+```
+Tokens Used: 683
+--------------------------------------------------
+
+Hour: 2025-04-11 11:08:36
+Prompt: Analiza estas imágenes de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {
+            "imagenes": [
+                {
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        },
+                        {
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }
+            ]
+        }
+        Responde ÚNICAMENTE con el JSON, escribe la respuesta a partir de la primera { y que cierre con la ultima }.
+        No añadas comillas simples ni dobles fuera del json.
+         Solo responde con la información solicitada, nada más.
+Response: ```json
+{
+    "imagenes": [
+        {
+            "categoria": "Pescado",
+            "subcategoria": "Zarzuela de mariscos",
+            "descripcion": "Guiso de pescado y mariscos en salsa",
+            "ingredientes": [
+                {
+                    "nombre": "Pescado",
+                    "proporcion": "0.2"
+                },
+                {
+                    "nombre": "Mejillones",
+                    "proporcion": "0.1"
+                },
+                {
+                    "nombre": "Calamares",
+                    "proporcion": "0.1"
+                },
+                {
+                    "nombre": "Pimiento rojo",
+                    "proporcion": "0.05"
+                },
+                {
+                    "nombre": "Salsa de tomate",
+                    "proporcion": "0.15"
+                }
+            ],
+            "recomendaciones": "Aprovechar para hacer croquetas o un arroz caldoso de mariscos"
+        }
+    ]
+}
+```
+Tokens Used: 710
+--------------------------------------------------
+
+Hour: 2025-04-11 11:24:28
+Prompt: Analiza estas imágenes de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {
+            "imagenes": [
+                {
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        },
+                        {
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }
+            ]
+        }
+        MUY IMPORTANTE: 
+        - Responde ÚNICAMENTE con el JSON puro.
+        - NO uses bloques de código markdown con ```.
+        - NO añadas la palabra 'json' ni ningún texto antes o después del JSON.
+        - Tu respuesta debe comenzar con { y terminar con }, sin nada más.
+         Solo responde con la información solicitada, nada más.
+Response: ```json
+{
+    "imagenes": [
+        {
+            "categoria": "Carne",
+            "subcategoria": "Pollo",
+            "descripcion": "Alitas de pollo cocinadas con especias",
+            "ingredientes": [
+                {
+                    "nombre": "Alitas de pollo",
+                    "proporcion": "0.5"
+                },
+                {
+                    "nombre": "Especias (pimentón, ajo, etc.)",
+                    "proporcion": "0.02"
+                }
+            ],
+            "recomendaciones": "Aprovechar en tacos, ensaladas o desmenuzar para añadir a sopas o cremas."
+        }
+    ]
+}
+```
+Tokens Used: 670
+--------------------------------------------------
+
+Hour: 2025-04-11 11:28:46
+Prompt: Analiza estas imágenes de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {
+            "imagenes": [
+                {
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        },
+                        {
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }
+            ]
+        }
+        MUY IMPORTANTE: 
+        - Responde ÚNICAMENTE con el JSON puro.
+        - NO uses bloques de código markdown con ```.
+        - NO añadas la palabra 'json' ni ningún texto antes o después del JSON.
+        - Tu respuesta debe comenzar con { y terminar con }, sin nada más.
+         Solo responde con la información solicitada, nada más.
+Response: ```json
+{
+    "imagenes": [
+        {
+            "categoria": "Carne",
+            "subcategoria": "Pollo",
+            "descripcion": "Alitas de pollo cocinadas con salsa barbacoa o similar.",
+            "ingredientes": [
+                {
+                    "nombre": "Alitas de pollo",
+                    "proporcion": "0.5"
+                },
+                {
+                    "nombre": "Salsa barbacoa",
+                    "proporcion": "0.1"
+                }
+            ],
+            "recomendaciones": "Desmenuzar la carne y usarla en tacos, quesadillas, o ensaladas. También se pueden recalentar al horno o en la freidora de aire para recuperar algo de crocancia."
+        }
+    ]
+}
+```
+Tokens Used: 683
+--------------------------------------------------
+
+Hour: 2025-04-11 11:29:36
+Prompt: Analiza estas imágenes de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {
+            "imagenes": [
+                {
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        },
+                        {
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }
+            ]
+        }
+        MUY IMPORTANTE: 
+        - Responde ÚNICAMENTE con el JSON puro.
+        - NO uses bloques de código markdown con  .
+        - NO añadas la palabra ' ' ni ningún texto antes o después del JSON.
+        - Tu respuesta debe comenzar con { y terminar con }, sin nada más.
+         Solo responde con la información solicitada, nada más.
+Response: ```json
+{
+    "imagenes": [
+        {
+            "categoria": "Carne",
+            "subcategoria": "Pollo",
+            "descripcion": "Alitas de pollo cocinadas, posiblemente fritas o asadas.",
+            "ingredientes": [
+                {
+                    "nombre": "Alas de pollo",
+                    "proporcion": "0.3"
+                },
+                {
+                    "nombre": "Especias (varias)",
+                    "proporcion": "0.01"
+                }
+            ],
+            "recomendaciones": "Reutilizar las alitas en tacos, ensaladas de pollo desmenuzado o en una sopa de pollo."
+        }
+    ]
+}
+```
+Tokens Used: 669
+--------------------------------------------------
+
+Hour: 2025-04-11 11:31:03
+Prompt: Analiza estas imágenes de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {
+            "imagenes": [
+                {
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        },
+                        {
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }
+            ]
+        }
+        MUY IMPORTANTE: 
+        - Responde ÚNICAMENTE con el JSON puro.
+        - NO uses bloques de código markdown con ```.
+        - NO añadas la palabra 'json' ni ningún texto antes o después del JSON.
+        - Tu respuesta debe comenzar con { y terminar con }, sin nada más.
+         Solo responde con la información solicitada, nada más.
+Response:   
+{
+    "imagenes": [
+        {
+            "categoria": "Verdura",
+            "subcategoria": "Guiso de calabaza",
+            "descripcion": "Calabaza guisada con salsa",
+            "ingredientes": [
+                {
+                    "nombre": "Calabaza",
+                    "proporcion": "0.7"
+                },
+                {
+                    "nombre": "Salsa",
+                    "proporcion": "0.3"
+                }
+            ],
+            "recomendaciones": "Hacer una crema de calabaza, añadir a un puré de patatas, usar como relleno para empanadas"
+        }
+    ]
+}
+ 
+Tokens Used: 659
+--------------------------------------------------
+
+Hour: 2025-04-11 11:33:42
+Prompt: Analiza estas imágenes de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {
+            "imagenes": [
+                {
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        },
+                        {
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }
+            ]
+        }
+        MUY IMPORTANTE: 
+        - Responde ÚNICAMENTE con el JSON puro.
+        - NO uses bloques de código markdown con ```.
+        - NO añadas la palabra 'json' ni ningún texto antes o después del JSON.
+        - Tu respuesta debe comenzar con { y terminar con }, sin nada más.
+         Solo responde con la información solicitada, nada más.
+Response:   
+{
+    "imagenes": [
+        {
+            "categoria": "Pescado",
+            "subcategoria": "Guiso de pescado y mariscos",
+            "descripcion": "Guiso con trozos de pescado, mejillones, calamares y verduras en una salsa espesa.",
+            "ingredientes": [
+                {
+                    "nombre": "Pescado (varios)",
+                    "proporcion": "0.2"
+                },
+                {
+                    "nombre": "Mejillones",
+                    "proporcion": "0.05"
+                },
+                {
+                    "nombre": "Calamares",
+                    "proporcion": "0.08"
+                },
+                {
+                    "nombre": "Pimiento rojo",
+                    "proporcion": "0.02"
+                },
+                {
+                    "nombre": "Pimiento verde",
+                    "proporcion": "0.02"
+                },
+                {
+                    "nombre": "Salsa (tomate, cebolla y especias)",
+                    "proporcion": "0.3"
+                }
+            ],
+            "recomendaciones": "Se puede utilizar para rellenar empanadas, croquetas o como base para una sopa de pescado."
+        }
+    ]
+}
+ 
+Tokens Used: 794
+--------------------------------------------------
+
+Hour: 2025-04-11 14:31:00
+Prompt: Analiza estas imágenes de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {
+            "imagenes": [
+                {
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        },
+                        {
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }
+            ]
+        }
+         Solo responde con la información solicitada, nada más.
+Response:   
+{
+    "imagenes": [
+        {
+            "categoria": "Carne",
+            "subcategoria": "Pollo",
+            "descripcion": "Alitas de pollo fritas",
+            "ingredientes": [
+                {
+                    "nombre": "Alitas de pollo",
+                    "proporcion": "0.3"
+                },
+                {
+                    "nombre": "Especias",
+                    "proporcion": "0.01"
+                }
+            ],
+            "recomendaciones": "Reutilizar las alitas en tacos, sándwiches o ensaladas. Calentar al horno o en la freidora de aire para evitar que queden blandas."
+        }
+    ]
+}
+ 
+Tokens Used: 603
+--------------------------------------------------
+
+Hour: 2025-04-22 14:11:06
+Prompt: 
+                Imagenes de comida sobrante da una respuesta de la siguiente forma para cada imagen:
+                - Categoría (Carne, Pescado, carne o pescado en salsa, marisco)
+                - Subcategoría
+                - Información adicional del plato
+                - Posibles ingredientes
+                - Recomendaciones para recalentar y aprovechar las sobras
+                Solo responde con la información solicitada, nada más.
+                
+Response: - Categoría: Carne
+- Subcategoría: Pollo
+- Información adicional del plato: Alitas de pollo fritas o asadas con especias.
+- Posibles ingredientes: Alitas de pollo, especias (pimentón, ajo en polvo, cebolla en polvo, pimienta, sal), aceite.
+- Recomendaciones para recalentar y aprovechar las sobras:
+  - Recalentar en horno o freidora de aire para mantener la textura crujiente.
+  - Usar las alitas desmenuzadas para hacer tacos, burritos o ensaladas.
+  - Incorporar a un salteado de verduras y arroz.
+
+Tokens Used: 477
+--------------------------------------------------
+
+Hour: 2025-04-22 14:11:19
+Prompt: Analiza estas imágenes de comida sobrante y proporciona la información en formato JSON con exactamente la siguiente estructura:
+        {
+            "imagenes": [
+                {
+                    "categoria": "Tipo de alimento (Carne, Pescado, Verdura, etc.)",
+                    "subcategoria": "Especificación más detallada",
+                    "descripcion": "Información adicional del plato",
+                    "ingredientes": [
+                        {
+                            "nombre": "ingrediente1",
+                            "proporcion": "estimación en Kg"
+                        },
+                        {
+                            "nombre": "ingrediente2",
+                            "proporcion": "estimación en Kg"
+                        }
+                    ],
+                    "recomendaciones": "Sugerencias para aprovechar las sobras"
+                }
+            ]
+        }
+         Solo responde con la información solicitada, nada más.
+Response:   
+{
+    "imagenes": [
+        {
+            "categoria": "Carne",
+            "subcategoria": "Pollo frito",
+            "descripcion": "Alitas de pollo frito con especias.",
+            "ingredientes": [
+                {
+                    "nombre": "Alitas de pollo",
+                    "proporcion": "0.5"
+                },
+                {
+                    "nombre": "Especias",
+                    "proporcion": "0.01"
+                }
+            ],
+            "recomendaciones": "Se pueden recalentar al horno, usar en tacos o desmenuzar en ensaladas."
+        }
+    ]
+}
+ 
+Tokens Used: 589
+--------------------------------------------------

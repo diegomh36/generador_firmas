@@ -11,10 +11,10 @@
     <form method="POST" class="mb-4">
         {% csrf_token %}
         <div class="form-group">
-            <label for="consulta_texto">Escribe tu consulta:</label>
+            <label for="consulta_texto">Escribe los ingredientes:</label>
             <textarea name="consulta_texto" id="consulta_texto" class="form-control" rows="4" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary mt-2">Enviar consulta</button>
+        <button type="submit" class="btn btn-primary mt-2">Enviar</button>
     </form>
     
     {% if resultado %}
